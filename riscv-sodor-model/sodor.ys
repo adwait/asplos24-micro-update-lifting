@@ -1,0 +1,16 @@
+yosys -import
+
+read_verilog $::env(RTL_SOURCE)
+# read_verilog ../sims/verilator/generated-src/chipyard.TestHarness.Sodor3StageConfig/chipyard.TestHarness.Sodor3StageConfig.top.v
+read_verilog ./rtl/CoreTop.v
+read_verilog ./rtl/SimpleDMem.v
+
+hierarchy -top CoreTop
+hierarchy -check
+
+procs; opt; fsm; opt; memory; opt;
+techmap; opt
+clean
+
+# write_verilog -noattr rtl/sodor_top.v
+write_verilog -noattr $::env(RTL_DEST)

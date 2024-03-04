@@ -1,0 +1,18 @@
+# running in equiv_taskBMC12_sodor5_rtype/src/
+
+read -formal -DRTYPE sodor5_bmc.v
+read -formal sodor5_model_rtype_full.v
+read -formal sodor5_dmem_top.v
+prep -top sodor5_verif
+
+
+memory_nordff
+async2sync
+chformal -assume -early
+chformal -live -fair -cover -remove
+opt_clean
+setundef -anyseq
+opt -keepdc -fast
+check
+hierarchy -simcheck
+write_ilang ../model/design.il

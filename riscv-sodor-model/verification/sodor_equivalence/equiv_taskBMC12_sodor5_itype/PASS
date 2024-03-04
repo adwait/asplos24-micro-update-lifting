@@ -1,0 +1,3 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:11:50 (710)
+Elapsed process time [H:MM:SS (secs)]: 0:12:14 (734)
+engine_0 (smtbmc boolector) returned pass

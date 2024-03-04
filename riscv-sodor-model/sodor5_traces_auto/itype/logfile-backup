@@ -1,0 +1,490 @@
+collapsed0.smt2
+(
+(define-fun feed__alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool x0)
+(define-fun feed__mem_reg_alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (or x0 x1) (not x0)))
+(define-fun feed__reg_rd_data_in__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (and (not x0) x2) (or (not x1) x0)))
+(define-fun feed__reg_rs1_data_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (and (not x0) (not x2)) (not x1)))
+)
+
+real	0m6.862s
+user	0m6.840s
+sys	0m0.022s
+
+collapsed10.smt2
+(
+(define-fun feed__alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun feed__imm__reg_rd_data_in__feed__reg_rs1_data_out__reg_rd_data_in__feed__reg_rs2_data_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun feed__mem_reg_alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.034s
+user	0m0.030s
+sys	0m0.004s
+
+collapsed11.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.013s
+user	0m0.006s
+sys	0m0.007s
+
+collapsed12.smt2
+(
+(define-fun regs1_read ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.016s
+sys	0m0.000s
+
+collapsed13.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.024s
+user	0m0.024s
+sys	0m0.000s
+
+collapsed14.smt2
+(
+(define-fun regs2_read ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.015s
+user	0m0.015s
+sys	0m0.000s
+
+collapsed15.smt2
+(
+(define-fun regs_write ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.012s
+user	0m0.005s
+sys	0m0.007s
+
+collapsed16.smt2
+(
+(define-fun alu_compute_comb__feed__alu_out__mem_reg_alu_out__feed__dec_wbaddr__exe_reg_wbaddr__feed__exe_reg_wbaddr__mem_reg_wbaddr__feed__imm_i__alu_op2__feed__mem_reg_alu_out__reg_rd_data_in__feed__mem_reg_wbaddr__reg_rd_addr_in__gen_decode_all__regs1_read__regs2_read__regs_write ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+(define-fun feed__alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool x0)
+(define-fun feed__alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun feed__imm__reg_rd_data_in__feed__reg_rs1_data_out__reg_rd_data_in__feed__reg_rs2_data_out__reg_rd_data_in__flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun feed__mem_reg_alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (not x0) x1))
+(define-fun feed__reg_rd_data_in__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (or (and (and (not x0) (not x1)) x2) false))
+(define-fun feed__reg_rs1_data_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (and (not x2) (not x1)) (not x0)))
+(define-fun zero__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+)
+
+real	0m8.863s
+user	0m8.857s
+sys	0m0.006s
+
+collapsed1.smt2
+(
+(define-fun feed__imm_i__alu_op2 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.016s
+sys	0m0.000s
+
+collapsed2.smt2
+(
+(define-fun alu_compute_comb ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.014s
+user	0m0.011s
+sys	0m0.003s
+
+collapsed3.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.026s
+user	0m0.022s
+sys	0m0.005s
+
+collapsed4.smt2
+(
+(define-fun feed__dec_wbaddr__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+(define-fun zero__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+)
+
+real	0m0.015s
+user	0m0.015s
+sys	0m0.000s
+
+collapsed5.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.017s
+user	0m0.017s
+sys	0m0.000s
+
+collapsed6.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.026s
+user	0m0.023s
+sys	0m0.003s
+
+collapsed7.smt2
+(
+(define-fun feed__alu_out__mem_reg_alu_out ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.015s
+user	0m0.009s
+sys	0m0.007s
+
+collapsed8.smt2
+(
+(define-fun feed__exe_reg_wbaddr__mem_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.009s
+sys	0m0.007s
+
+collapsed9.smt2
+(
+(define-fun feed__mem_reg_wbaddr__reg_rd_addr_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.015s
+sys	0m0.002s
+
+collapsed20.smt2
+(
+(define-fun feed__alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool x0)
+(define-fun feed__mem_reg_alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (or x0 x1) (not x0)))
+(define-fun feed__reg_rd_data_in__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (and (not x0) x2) (or (not x1) x0)))
+(define-fun feed__reg_rs1_data_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (and (not x0) (not x2)) (not x1)))
+)
+
+real	0m6.828s
+user	0m6.816s
+sys	0m0.012s
+
+collapsed21.smt2
+(
+(define-fun feed__imm_i__alu_op2 ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.014s
+sys	0m0.002s
+
+collapsed22.smt2
+(
+(define-fun alu_compute_comb ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.011s
+sys	0m0.005s
+
+collapsed23.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.022s
+user	0m0.017s
+sys	0m0.006s
+
+collapsed24.smt2
+(
+(define-fun feed__dec_wbaddr__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+(define-fun zero__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+)
+
+real	0m0.026s
+user	0m0.026s
+sys	0m0.000s
+
+collapsed25.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.026s
+user	0m0.018s
+sys	0m0.008s
+
+collapsed26.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.026s
+user	0m0.026s
+sys	0m0.000s
+
+collapsed27.smt2
+(
+(define-fun feed__alu_out__mem_reg_alu_out ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.014s
+sys	0m0.002s
+
+collapsed28.smt2
+(
+(define-fun feed__exe_reg_wbaddr__mem_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.013s
+user	0m0.010s
+sys	0m0.004s
+
+collapsed29.smt2
+(
+(define-fun feed__mem_reg_wbaddr__reg_rd_addr_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.017s
+user	0m0.015s
+sys	0m0.002s
+
+collapsed30.smt2
+(
+(define-fun feed__alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun feed__imm__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun feed__mem_reg_alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+(define-fun feed__reg_rs1_data_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun feed__reg_rs2_data_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+)
+
+real	0m0.040s
+user	0m0.036s
+sys	0m0.004s
+
+collapsed31.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.027s
+user	0m0.020s
+sys	0m0.007s
+
+collapsed32.smt2
+(
+(define-fun regs1_read ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.009s
+user	0m0.009s
+sys	0m0.000s
+
+collapsed33.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.028s
+user	0m0.017s
+sys	0m0.010s
+
+collapsed34.smt2
+(
+(define-fun regs2_read ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.015s
+user	0m0.015s
+sys	0m0.000s
+
+collapsed35.smt2
+(
+(define-fun regs_write ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.014s
+user	0m0.014s
+sys	0m0.000s
+
+collapsed40.smt2
+(
+(define-fun feed__alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and x3 x0))
+(define-fun feed__mem_reg_alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and (and (not x0) x1) x3) false))
+(define-fun feed__reg_rd_data_in__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and (and (and (not x1) (or x3 x0)) x2) (not x0)))
+(define-fun feed__reg_rs1_data_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and (and (not x0) (not x2)) (not x1)) (not x3)))
+)
+
+real	1m1.106s
+user	1m1.073s
+sys	0m0.034s
+
+collapsed41.smt2
+(
+(define-fun feed__imm_i__alu_op2 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.012s
+sys	0m0.003s
+
+collapsed42.smt2
+(
+(define-fun alu_compute_comb ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.017s
+user	0m0.017s
+sys	0m0.000s
+
+collapsed43.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.028s
+user	0m0.023s
+sys	0m0.005s
+
+collapsed44.smt2
+(
+(define-fun feed__dec_wbaddr__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+(define-fun zero__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+)
+
+real	0m0.016s
+user	0m0.013s
+sys	0m0.004s
+
+collapsed45.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.027s
+user	0m0.017s
+sys	0m0.010s
+
+collapsed46.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.028s
+user	0m0.023s
+sys	0m0.005s
+
+collapsed47.smt2
+(
+(define-fun feed__alu_out__mem_reg_alu_out ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.009s
+sys	0m0.007s
+
+collapsed48.smt2
+(
+(define-fun feed__exe_reg_wbaddr__mem_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.014s
+user	0m0.008s
+sys	0m0.006s
+
+collapsed49.smt2
+(
+(define-fun feed__mem_reg_wbaddr__reg_rd_addr_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.017s
+user	0m0.013s
+sys	0m0.004s
+
+collapsed50.smt2
+(
+(define-fun feed__alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun feed__imm__reg_rd_data_in__feed__reg_rs1_data_out__reg_rd_data_in__feed__reg_rs2_data_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun feed__mem_reg_alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.038s
+user	0m0.031s
+sys	0m0.007s
+
+collapsed51.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.028s
+user	0m0.027s
+sys	0m0.002s
+
+collapsed52.smt2
+(
+(define-fun regs1_read ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.010s
+user	0m0.006s
+sys	0m0.004s
+
+collapsed53.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.029s
+user	0m0.022s
+sys	0m0.006s
+
+collapsed54.smt2
+(
+(define-fun regs2_read ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.012s
+sys	0m0.003s
+
+collapsed55.smt2
+(
+(define-fun regs_write ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.014s
+user	0m0.010s
+sys	0m0.004s
+
+collapsed40.smt2
+(
+(define-fun feed__alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and x3 x0))
+(define-fun feed__mem_reg_alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and (and (not x0) x1) x3) false))
+(define-fun feed__reg_rd_data_in__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and (and (and (not x1) (or x3 x0)) x2) (not x0)))
+(define-fun feed__reg_rs1_data_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and (and (not x0) (not x2)) (not x1)) (not x3)))
+)

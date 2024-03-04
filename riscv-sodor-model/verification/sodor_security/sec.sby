@@ -1,0 +1,51 @@
+[tasks]
+taskBMC20_sodor5_lb_u task_bmc20 files_lb_u
+taskBMC20_sodor5_model_lb_u task_bmc20 files_model_lb_u
+taskBMC22_sodor5_lb_u task_bmc22 files_lb_u
+taskBMC22_sodor5_model_lb_u task_bmc22 files_model_lb_u
+
+[options]
+task_bmc20:
+mode bmc
+depth 20
+--
+
+task_bmc22:
+mode bmc
+depth 22
+--
+
+[engines]
+task_bmc20:
+smtbmc boolector
+--
+
+task_bmc22:
+smtbmc boolector
+--
+
+[script]
+files_lb_u:
+read -formal sodor5_dmem_top.v
+read -formal sodor5_lb_unified_bmc.v
+prep -top sodor5_verif
+--
+
+files_model_lb_u:
+read -formal -DLB_VERIF -DRANDOMIZE -DDATAOPT sodor5_model_ilstype_full.v
+read -formal -DMODEL sodor5_lb_unified_bmc.v
+read_verilog -formal -DSODOR5_SIGNALS SimpleDMem.v
+prep -top sodor5_verif
+--
+
+[files]
+files_lb_u:
+sodor5_dmem_top.v
+sodor5_lb_unified_bmc.v
+--
+
+files_model_lb_u:
+sodor5_model_ilstype_full.v
+sodor5_lb_unified_bmc.v
+SimpleDMem.v
+--

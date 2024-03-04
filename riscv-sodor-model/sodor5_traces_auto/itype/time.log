@@ -1,0 +1,6 @@
+{
+    "simulation": 116.81424832344055,
+    "mseq_generation": 116.81425976753235,
+    "guard_synthesis": 256.96986985206604,
+    "equiv_proof": 967.57381772995
+}

@@ -1,0 +1,5 @@
+# running in equiv_taskBMC12_sodor5_ilstype/model/
+read_ilang design.il
+dffunmap
+stat
+write_smt2 -wires design_smt2.smt2

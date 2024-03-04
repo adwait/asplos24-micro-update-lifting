@@ -1,0 +1,10 @@
+read_verilog ../sims/verilator/generated-src/chipyard.TestHarness.Sodor2StageConfig/chipyard.TestHarness.Sodor2StageConfig.top.v
+
+hierarchy -top SodorInternalTile
+hierarchy -check
+
+proc; opt; fsm; opt; memory; opt;
+techmap; opt
+clean
+
+write_verilog -noattr rtl/sodor2_coremem_top.v

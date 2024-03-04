@@ -1,0 +1,7 @@
+SBY  6:28:03 [equiv_taskBMC15_sodor5_ilstype] Removing directory 'equiv_taskBMC15_sodor5_ilstype'.
+SBY  6:28:03 [equiv_taskBMC15_sodor5_ilstype] Copy 'sodor5_bmc.v' to 'equiv_taskBMC15_sodor5_ilstype/src/sodor5_bmc.v'.
+SBY  6:28:03 [equiv_taskBMC15_sodor5_ilstype] Copy 'sodor5_model_ilstype_full.v' to 'equiv_taskBMC15_sodor5_ilstype/src/sodor5_model_ilstype_full.v'.
+SBY  6:28:03 [equiv_taskBMC15_sodor5_ilstype] Copy 'sodor5_dmem_top.v' to 'equiv_taskBMC15_sodor5_ilstype/src/sodor5_dmem_top.v'.
+SBY  6:28:03 [equiv_taskBMC15_sodor5_ilstype] engine_0: smtbmc boolector
+SBY  6:28:03 [equiv_taskBMC15_sodor5_ilstype] base: starting process "cd equiv_taskBMC15_sodor5_ilstype/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  6:28:03 [equiv_taskBMC15_sodor5_ilstype] base: terminating process

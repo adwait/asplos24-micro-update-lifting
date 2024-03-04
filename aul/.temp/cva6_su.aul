@@ -1,0 +1,31 @@
+[(~is_valid_instr & is_valid_commit)] {
+ state_q[commit_ptr] = 2'b1;
+ 
+}
+
+[(~is_valid_commit & is_valid_commit)] {
+ state_q[commit_ptr] = 2'b1;
+state_q[serve_ptr] = 2'b0;
+ 
+}
+
+[((~is_valid_instr & ~is_valid_store_mem_resp) & ~is_valid_commit)] {
+  
+}
+
+[((~is_valid_commit & is_valid_store_mem_resp) & ~is_valid_instr)] {
+ state_q[serve_ptr] = 2'b0;
+ 
+}
+
+[is_valid_instr] {
+ state_q[store_ptr] = 2'b3;
+ 
+}
+
+[(~is_valid_commit & is_valid_commit)] {
+ state_q[store_ptr] = 2'b3;
+state_q[serve_ptr] = 2'b0;
+ 
+}
+

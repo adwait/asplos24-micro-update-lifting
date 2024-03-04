@@ -1,0 +1,11 @@
+SBY  6:27:58 [equiv_taskBMC12_sodor5_ilstype] Removing directory 'equiv_taskBMC12_sodor5_ilstype'.
+SBY  6:27:58 [equiv_taskBMC12_sodor5_ilstype] Copy 'sodor5_bmc.v' to 'equiv_taskBMC12_sodor5_ilstype/src/sodor5_bmc.v'.
+SBY  6:27:58 [equiv_taskBMC12_sodor5_ilstype] Copy 'sodor5_model_ilstype_full.v' to 'equiv_taskBMC12_sodor5_ilstype/src/sodor5_model_ilstype_full.v'.
+SBY  6:27:58 [equiv_taskBMC12_sodor5_ilstype] Copy 'sodor5_dmem_top.v' to 'equiv_taskBMC12_sodor5_ilstype/src/sodor5_dmem_top.v'.
+SBY  6:27:58 [equiv_taskBMC12_sodor5_ilstype] engine_0: smtbmc boolector
+SBY  6:27:58 [equiv_taskBMC12_sodor5_ilstype] base: starting process "cd equiv_taskBMC12_sodor5_ilstype/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  6:27:59 [equiv_taskBMC12_sodor5_ilstype] base: Warning: Replacing memory \instr_queue_valid with list of registers. See sodor5_model_ilstype_full.v:841, sodor5_model_ilstype_full.v:813
+SBY  6:27:59 [equiv_taskBMC12_sodor5_ilstype] base: Warning: Replacing memory \instr_queue with list of registers. See sodor5_model_ilstype_full.v:840, sodor5_model_ilstype_full.v:812
+SBY  6:27:59 [equiv_taskBMC12_sodor5_ilstype] base: Warning: Replacing memory \mem with list of registers. See sodor5_model_ilstype_full.v:803
+SBY  6:27:59 [equiv_taskBMC12_sodor5_ilstype] base: Warning: Replacing memory \regfile with list of registers. See sodor5_model_ilstype_full.v:1201, sodor5_model_ilstype_full.v:942, sodor5_model_ilstype_full.v:795
+SBY  6:28:00 [equiv_taskBMC12_sodor5_ilstype] base: terminating process

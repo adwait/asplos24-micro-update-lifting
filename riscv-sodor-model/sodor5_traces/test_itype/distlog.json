@@ -1,0 +1,29 @@
+[
+    {
+        "bad_txns": [
+            "feed__imm__reg_rd_data_in",
+            "feed__reg_rs1_data_out__reg_rd_data_in",
+            "feed__reg_rs2_data_out__reg_rd_data_in",
+            "feed__alu_out__reg_rd_data_in",
+            "alu_compute_alu_out_imm",
+            "alu_compute_memd_imm",
+            "alu_compute_rd_imm",
+            "alu_compute_alu_out_rs",
+            "alu_compute_alu_out_rs2",
+            "alu_compute_rd_rs2",
+            "alu_compute_add_rs_imm_b",
+            "alu_compute_add_alu_out_imm_b",
+            "alu_compute_add_memd_imm_b",
+            "alu_compute_add_rd_imm_b",
+            "alu_compute_memd_rs2",
+            "alu_compute_rd_alu_out"
+        ],
+        "iframe": {
+            "inst_fet": 19,
+            "inst_dec": 1074712595,
+            "inst_exe": 1092079635,
+            "inst_mem": 1080317843,
+            "inst_wb": 16435
+        }
+    }
+]

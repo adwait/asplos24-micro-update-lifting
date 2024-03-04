@@ -1,0 +1,21 @@
+[options]
+mode bmc
+depth 30
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal cva6_tlb_equiv.v
+read -formal cva6_tlb_sv32.v
+read -formal cva6_tlb_model.v
+prep -top tlb_tb
+
+
+
+[files]
+cva6_tlb_equiv.v
+cva6_tlb_model.v
+cva6_tlb_sv32.v
+
+

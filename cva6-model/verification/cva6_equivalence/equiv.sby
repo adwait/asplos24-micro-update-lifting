@@ -1,0 +1,86 @@
+[tasks]
+taskBMC15_equiv_tlb task_bmc15 files_equiv_tlb
+taskBMC15_equiv_su task_bmc15 files_equiv_su
+taskBMC15_equiv_lsu task_bmc15 files_equiv_lsu
+taskBMC30_equiv_tlb task_bmc30 files_equiv_tlb
+taskBMC30_equiv_su task_bmc30 files_equiv_su
+taskBMC30_equiv_lsu task_bmc30 files_equiv_lsu
+
+[options]
+task_bmc15:
+mode bmc
+depth 15
+--
+
+task_bmc30:
+mode bmc
+depth 30
+--
+
+[engines]
+task_bmc15:
+smtbmc boolector
+--
+
+task_bmc30:
+smtbmc boolector
+--
+
+[script]
+files_equiv_tlb:
+read -formal cva6_tlb_equiv.v
+read -formal cva6_tlb_sv32.v
+read -formal cva6_tlb_model.v
+prep -top tlb_tb
+--
+
+files_equiv_lsu:
+read -formal -DEXPOSE_STATE cva6_lsu_equiv.v
+read -formal -DEXPOSE_STATE load_store_unit.v
+read -formal shift_reg.v
+read -formal -DEXPOSE_STATE store_unit.v
+read -formal -DEXPOSE_STATE store_buffer.v
+read -formal amo_buffer.v
+read -formal -DEXPOSE_STATE load_unit.v
+read -formal lsu_bypass.v
+read -formal -DEXPOSE_STATE cva6_lsu_model.v
+read -formal -DEXPOSE_STATE cva6_lsu_shim.v
+prep -top cva6_lsu_model_tb
+--
+
+files_equiv_su:
+read -formal -DEXPOSE_STATE cva6_su_equiv.v
+read -formal -DEXPOSE_STATE store_unit.v
+read -formal -DEXPOSE_STATE store_buffer.v
+read -formal amo_buffer.v
+read -formal -DEXPOSE_STATE cva6_su_model.v
+prep -top store_unit_model_tb
+--
+
+[files]
+files_equiv_tlb:
+cva6_tlb_equiv.v
+cva6_tlb_model.v
+cva6_tlb_sv32.v
+--
+
+files_equiv_lsu:
+cva6_lsu_equiv.v
+load_store_unit.v
+shift_reg.v
+store_unit.v
+store_buffer.v
+amo_buffer.v
+load_unit.v
+lsu_bypass.v
+cva6_lsu_model.v
+cva6_lsu_shim.v
+--
+
+files_equiv_su:
+cva6_su_equiv.v
+store_unit.v
+store_buffer.v
+amo_buffer.v
+cva6_su_model.v
+--

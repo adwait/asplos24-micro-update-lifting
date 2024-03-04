@@ -1,0 +1,720 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+4052 (git sha1 a58571d0, clang 6.0.0-1ubuntu2 -fPIC -Os)
+
+
+-- Executing script file `sodor.ys' --
+
+1. Executing Verilog-2005 frontend: sodor_formal.v
+Parsing Verilog input from `sodor_formal.v' to AST representation.
+Generating RTLIL representation for module `\sodor_formal'.
+Warning: Replacing memory \regfile with list of registers. See sodor_formal.v:234, sodor_formal.v:222, sodor_formal.v:196
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \sodor_formal
+
+2.2. Analyzing design hierarchy..
+Top module:  \sodor_formal
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 7 dead cases from process $proc$sodor_formal.v:191$34 in module sodor_formal.
+Marked 11 switch rules as full_case in process $proc$sodor_formal.v:191$34 in module sodor_formal.
+Removed a total of 7 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 112 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\sodor_formal.$proc$sodor_formal.v:0$381'.
+  Set init value: \init = 1'1
+  Set init value: \reset = 1'1
+  Set init value: \counter = 3'000
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\sodor_formal.$proc$sodor_formal.v:0$381'.
+Creating decoders for process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+     1/386: $5$mem2reg_rd$\regfile$sodor_formal.v:253$27_DATA[31:0]$343
+     2/386: $5$mem2reg_rd$\regfile$sodor_formal.v:252$26_DATA[31:0]$342
+     3/386: $4\pc[31:0]
+     4/386: $4\branch_pc[31:0]
+     5/386: $4\branch_compute$func$sodor_formal.v:256$20.$result[31:0]$332
+     6/386: $4\branch_compute$func$sodor_formal.v:256$20.funct3[2:0]$337
+     7/386: $4\branch_compute$func$sodor_formal.v:256$20.imm_data[31:0]$336
+     8/386: $4\branch_compute$func$sodor_formal.v:256$20.pc[31:0]$335
+     9/386: $4\branch_compute$func$sodor_formal.v:256$20.rs2[31:0]$334
+    10/386: $4\branch_compute$func$sodor_formal.v:256$20.rs1[31:0]$333
+    11/386: $4\rs2_data[31:0]
+    12/386: $4$mem2reg_rd$\regfile$sodor_formal.v:253$27_DATA[31:0]$341
+    13/386: $4$mem2reg_rd$\regfile$sodor_formal.v:253$27_ADDR[4:0]$340
+    14/386: $4\rs1_data[31:0]
+    15/386: $4$mem2reg_rd$\regfile$sodor_formal.v:252$26_DATA[31:0]$339
+    16/386: $4$mem2reg_rd$\regfile$sodor_formal.v:252$26_ADDR[4:0]$338
+    17/386: $4\funct3[2:0]
+    18/386: $4\get_funct3$func$sodor_formal.v:249$19.$result[2:0]$330
+    19/386: $4\get_funct3$func$sodor_formal.v:249$19.inst[31:0]$331
+    20/386: $4\imm_data[31:0]
+    21/386: $4\get_b_imm$func$sodor_formal.v:248$18.$result[31:0]$328
+    22/386: $4\get_b_imm$func$sodor_formal.v:248$18.inst[31:0]$329
+    23/386: $4\rs2[4:0]
+    24/386: $4\get_rs2$func$sodor_formal.v:247$17.$result[4:0]$326
+    25/386: $4\get_rs2$func$sodor_formal.v:247$17.inst[31:0]$327
+    26/386: $4\rs1[4:0]
+    27/386: $4\get_rs1$func$sodor_formal.v:246$16.$result[4:0]$324
+    28/386: $4\get_rs1$func$sodor_formal.v:246$16.inst[31:0]$325
+    29/386: $5\regfile[0][31:0]
+    30/386: $5\regfile[31][31:0]
+    31/386: $5\regfile[30][31:0]
+    32/386: $5\regfile[29][31:0]
+    33/386: $5\regfile[28][31:0]
+    34/386: $5\regfile[27][31:0]
+    35/386: $5\regfile[26][31:0]
+    36/386: $5\regfile[25][31:0]
+    37/386: $5\regfile[24][31:0]
+    38/386: $5\regfile[23][31:0]
+    39/386: $5\regfile[22][31:0]
+    40/386: $5\regfile[21][31:0]
+    41/386: $5\regfile[20][31:0]
+    42/386: $5\regfile[19][31:0]
+    43/386: $5\regfile[18][31:0]
+    44/386: $5\regfile[17][31:0]
+    45/386: $5\regfile[16][31:0]
+    46/386: $5\regfile[15][31:0]
+    47/386: $5\regfile[14][31:0]
+    48/386: $5\regfile[13][31:0]
+    49/386: $5\regfile[12][31:0]
+    50/386: $5\regfile[11][31:0]
+    51/386: $5\regfile[10][31:0]
+    52/386: $5\regfile[9][31:0]
+    53/386: $5\regfile[8][31:0]
+    54/386: $5\regfile[7][31:0]
+    55/386: $5\regfile[6][31:0]
+    56/386: $5\regfile[5][31:0]
+    57/386: $5\regfile[4][31:0]
+    58/386: $5\regfile[3][31:0]
+    59/386: $5\regfile[2][31:0]
+    60/386: $5\regfile[1][31:0]
+    61/386: $4$mem2reg_rd$\regfile$sodor_formal.v:234$24_DATA[31:0]$294
+    62/386: $3\pc[31:0]
+    63/386: $4\regfile[31][31:0]
+    64/386: $4\regfile[30][31:0]
+    65/386: $4\regfile[29][31:0]
+    66/386: $4\regfile[28][31:0]
+    67/386: $4\regfile[27][31:0]
+    68/386: $4\regfile[26][31:0]
+    69/386: $4\regfile[25][31:0]
+    70/386: $4\regfile[24][31:0]
+    71/386: $4\regfile[23][31:0]
+    72/386: $4\regfile[22][31:0]
+    73/386: $4\regfile[21][31:0]
+    74/386: $4\regfile[20][31:0]
+    75/386: $4\regfile[19][31:0]
+    76/386: $4\regfile[18][31:0]
+    77/386: $4\regfile[17][31:0]
+    78/386: $4\regfile[16][31:0]
+    79/386: $4\regfile[15][31:0]
+    80/386: $4\regfile[14][31:0]
+    81/386: $4\regfile[13][31:0]
+    82/386: $4\regfile[12][31:0]
+    83/386: $4\regfile[11][31:0]
+    84/386: $4\regfile[10][31:0]
+    85/386: $4\regfile[9][31:0]
+    86/386: $4\regfile[8][31:0]
+    87/386: $4\regfile[7][31:0]
+    88/386: $4\regfile[6][31:0]
+    89/386: $4\regfile[5][31:0]
+    90/386: $4\regfile[4][31:0]
+    91/386: $4\regfile[3][31:0]
+    92/386: $4\regfile[2][31:0]
+    93/386: $4\regfile[1][31:0]
+    94/386: $4\regfile[0][31:0]
+    95/386: $3$mem2reg_wr$\regfile$sodor_formal.v:240$25_ADDR[4:0]$288
+    96/386: $3$mem2reg_wr$\regfile$sodor_formal.v:240$25_DATA[31:0]$289
+    97/386: $3\alu_out_data[31:0]
+    98/386: $3\alu_compute_i$func$sodor_formal.v:237$14.$result[31:0]$265
+    99/386: $3\sra$func$sodor_formal.v:148$15.$result[31:0]$269
+   100/386: $3\sra$func$sodor_formal.v:148$15.shamt[4:0]$271
+   101/386: $3\sra$func$sodor_formal.v:148$15.d[63:0]$270
+   102/386: $3\alu_compute_i$func$sodor_formal.v:237$14.funct3[2:0]$268
+   103/386: $3\alu_compute_i$func$sodor_formal.v:237$14.imm_data[31:0]$267
+   104/386: $3\alu_compute_i$func$sodor_formal.v:237$14.reg_data[31:0]$266
+   105/386: $3\rs1_data[31:0]
+   106/386: $3$mem2reg_rd$\regfile$sodor_formal.v:234$24_DATA[31:0]$287
+   107/386: $3$mem2reg_rd$\regfile$sodor_formal.v:234$24_ADDR[4:0]$286
+   108/386: $3\funct3[2:0]
+   109/386: $3\get_funct3$func$sodor_formal.v:231$13.$result[2:0]$263
+   110/386: $3\get_funct3$func$sodor_formal.v:231$13.inst[31:0]$264
+   111/386: $3\rd[4:0]
+   112/386: $3\get_rd$func$sodor_formal.v:230$12.$result[4:0]$261
+   113/386: $3\get_rd$func$sodor_formal.v:230$12.inst[31:0]$262
+   114/386: $3\imm_data[31:0]
+   115/386: $3\get_i_imm$func$sodor_formal.v:229$11.$result[31:0]$259
+   116/386: $3\get_i_imm$func$sodor_formal.v:229$11.inst[31:0]$260
+   117/386: $3\rs1[4:0]
+   118/386: $3\get_rs1$func$sodor_formal.v:228$10.$result[4:0]$257
+   119/386: $3\get_rs1$func$sodor_formal.v:228$10.inst[31:0]$258
+   120/386: $3$mem2reg_rd$\regfile$sodor_formal.v:253$27_DATA[31:0]$293
+   121/386: $3$mem2reg_rd$\regfile$sodor_formal.v:253$27_ADDR[4:0]$292
+   122/386: $3$mem2reg_rd$\regfile$sodor_formal.v:252$26_DATA[31:0]$291
+   123/386: $3$mem2reg_rd$\regfile$sodor_formal.v:252$26_ADDR[4:0]$290
+   124/386: $3\branch_compute$func$sodor_formal.v:256$20.funct3[2:0]$285
+   125/386: $3\branch_compute$func$sodor_formal.v:256$20.imm_data[31:0]$284
+   126/386: $3\branch_compute$func$sodor_formal.v:256$20.pc[31:0]$283
+   127/386: $3\branch_compute$func$sodor_formal.v:256$20.rs2[31:0]$282
+   128/386: $3\branch_compute$func$sodor_formal.v:256$20.rs1[31:0]$281
+   129/386: $3\branch_compute$func$sodor_formal.v:256$20.$result[31:0]$280
+   130/386: $3\get_funct3$func$sodor_formal.v:249$19.inst[31:0]$279
+   131/386: $3\get_funct3$func$sodor_formal.v:249$19.$result[2:0]$278
+   132/386: $3\get_b_imm$func$sodor_formal.v:248$18.inst[31:0]$277
+   133/386: $3\get_b_imm$func$sodor_formal.v:248$18.$result[31:0]$276
+   134/386: $3\get_rs2$func$sodor_formal.v:247$17.inst[31:0]$275
+   135/386: $3\get_rs2$func$sodor_formal.v:247$17.$result[4:0]$274
+   136/386: $3\get_rs1$func$sodor_formal.v:246$16.inst[31:0]$273
+   137/386: $3\get_rs1$func$sodor_formal.v:246$16.$result[4:0]$272
+   138/386: $3\branch_pc[31:0]
+   139/386: $3\rs2_data[31:0]
+   140/386: $3\rs2[4:0]
+   141/386: $3\regfile[0][31:0]
+   142/386: $3\regfile[31][31:0]
+   143/386: $3\regfile[30][31:0]
+   144/386: $3\regfile[29][31:0]
+   145/386: $3\regfile[28][31:0]
+   146/386: $3\regfile[27][31:0]
+   147/386: $3\regfile[26][31:0]
+   148/386: $3\regfile[25][31:0]
+   149/386: $3\regfile[24][31:0]
+   150/386: $3\regfile[23][31:0]
+   151/386: $3\regfile[22][31:0]
+   152/386: $3\regfile[21][31:0]
+   153/386: $3\regfile[20][31:0]
+   154/386: $3\regfile[19][31:0]
+   155/386: $3\regfile[18][31:0]
+   156/386: $3\regfile[17][31:0]
+   157/386: $3\regfile[16][31:0]
+   158/386: $3\regfile[15][31:0]
+   159/386: $3\regfile[14][31:0]
+   160/386: $3\regfile[13][31:0]
+   161/386: $3\regfile[12][31:0]
+   162/386: $3\regfile[11][31:0]
+   163/386: $3\regfile[10][31:0]
+   164/386: $3\regfile[9][31:0]
+   165/386: $3\regfile[8][31:0]
+   166/386: $3\regfile[7][31:0]
+   167/386: $3\regfile[6][31:0]
+   168/386: $3\regfile[5][31:0]
+   169/386: $3\regfile[4][31:0]
+   170/386: $3\regfile[3][31:0]
+   171/386: $3\regfile[2][31:0]
+   172/386: $3\regfile[1][31:0]
+   173/386: $3$mem2reg_rd$\regfile$sodor_formal.v:216$22_DATA[31:0]$224
+   174/386: $3$mem2reg_rd$\regfile$sodor_formal.v:215$21_DATA[31:0]$223
+   175/386: $2\pc[31:0]
+   176/386: $2\regfile[31][31:0]
+   177/386: $2\regfile[30][31:0]
+   178/386: $2\regfile[29][31:0]
+   179/386: $2\regfile[28][31:0]
+   180/386: $2\regfile[27][31:0]
+   181/386: $2\regfile[26][31:0]
+   182/386: $2\regfile[25][31:0]
+   183/386: $2\regfile[24][31:0]
+   184/386: $2\regfile[23][31:0]
+   185/386: $2\regfile[22][31:0]
+   186/386: $2\regfile[21][31:0]
+   187/386: $2\regfile[20][31:0]
+   188/386: $2\regfile[19][31:0]
+   189/386: $2\regfile[18][31:0]
+   190/386: $2\regfile[17][31:0]
+   191/386: $2\regfile[16][31:0]
+   192/386: $2\regfile[15][31:0]
+   193/386: $2\regfile[14][31:0]
+   194/386: $2\regfile[13][31:0]
+   195/386: $2\regfile[12][31:0]
+   196/386: $2\regfile[11][31:0]
+   197/386: $2\regfile[10][31:0]
+   198/386: $2\regfile[9][31:0]
+   199/386: $2\regfile[8][31:0]
+   200/386: $2\regfile[7][31:0]
+   201/386: $2\regfile[6][31:0]
+   202/386: $2\regfile[5][31:0]
+   203/386: $2\regfile[4][31:0]
+   204/386: $2\regfile[3][31:0]
+   205/386: $2\regfile[2][31:0]
+   206/386: $2\regfile[1][31:0]
+   207/386: $2\regfile[0][31:0]
+   208/386: $2$mem2reg_wr$\regfile$sodor_formal.v:222$23_ADDR[4:0]$213
+   209/386: $2$mem2reg_wr$\regfile$sodor_formal.v:222$23_DATA[31:0]$214
+   210/386: $2\alu_out_data[31:0]
+   211/386: $2\alu_compute_r$func$sodor_formal.v:219$8.$result[31:0]$172
+   212/386: $2\sra$func$sodor_formal.v:162$9.$result[31:0]$177
+   213/386: $2\sra$func$sodor_formal.v:162$9.shamt[4:0]$179
+   214/386: $2\sra$func$sodor_formal.v:162$9.d[63:0]$178
+   215/386: $2\alu_compute_r$func$sodor_formal.v:219$8.funct3[2:0]$176
+   216/386: $2\alu_compute_r$func$sodor_formal.v:219$8.funct7[6:0]$175
+   217/386: $2\alu_compute_r$func$sodor_formal.v:219$8.rs2_data[31:0]$174
+   218/386: $2\alu_compute_r$func$sodor_formal.v:219$8.rs1_data[31:0]$173
+   219/386: $2\rs2_data[31:0]
+   220/386: $2$mem2reg_rd$\regfile$sodor_formal.v:216$22_DATA[31:0]$212
+   221/386: $2$mem2reg_rd$\regfile$sodor_formal.v:216$22_ADDR[4:0]$211
+   222/386: $2\rs1_data[31:0]
+   223/386: $2$mem2reg_rd$\regfile$sodor_formal.v:215$21_DATA[31:0]$210
+   224/386: $2$mem2reg_rd$\regfile$sodor_formal.v:215$21_ADDR[4:0]$209
+   225/386: $2\funct7[6:0]
+   226/386: $2\get_funct7$func$sodor_formal.v:212$7.$result[6:0]$170
+   227/386: $2\get_funct7$func$sodor_formal.v:212$7.inst[31:0]$171
+   228/386: $2\funct3[2:0]
+   229/386: $2\get_funct3$func$sodor_formal.v:211$6.$result[2:0]$168
+   230/386: $2\get_funct3$func$sodor_formal.v:211$6.inst[31:0]$169
+   231/386: $2\rd[4:0]
+   232/386: $2\get_rd$func$sodor_formal.v:210$5.$result[4:0]$166
+   233/386: $2\get_rd$func$sodor_formal.v:210$5.inst[31:0]$167
+   234/386: $2\rs2[4:0]
+   235/386: $2\get_rs2$func$sodor_formal.v:209$4.$result[4:0]$164
+   236/386: $2\get_rs2$func$sodor_formal.v:209$4.inst[31:0]$165
+   237/386: $2\rs1[4:0]
+   238/386: $2\get_rs1$func$sodor_formal.v:208$3.$result[4:0]$162
+   239/386: $2\get_rs1$func$sodor_formal.v:208$3.inst[31:0]$163
+   240/386: $2$mem2reg_rd$\regfile$sodor_formal.v:253$27_DATA[31:0]$222
+   241/386: $2$mem2reg_rd$\regfile$sodor_formal.v:253$27_ADDR[4:0]$221
+   242/386: $2$mem2reg_rd$\regfile$sodor_formal.v:252$26_DATA[31:0]$220
+   243/386: $2$mem2reg_rd$\regfile$sodor_formal.v:252$26_ADDR[4:0]$219
+   244/386: $2$mem2reg_wr$\regfile$sodor_formal.v:240$25_DATA[31:0]$218
+   245/386: $2$mem2reg_wr$\regfile$sodor_formal.v:240$25_ADDR[4:0]$217
+   246/386: $2$mem2reg_rd$\regfile$sodor_formal.v:234$24_DATA[31:0]$216
+   247/386: $2$mem2reg_rd$\regfile$sodor_formal.v:234$24_ADDR[4:0]$215
+   248/386: $2\branch_compute$func$sodor_formal.v:256$20.funct3[2:0]$208
+   249/386: $2\branch_compute$func$sodor_formal.v:256$20.imm_data[31:0]$207
+   250/386: $2\branch_compute$func$sodor_formal.v:256$20.pc[31:0]$206
+   251/386: $2\branch_compute$func$sodor_formal.v:256$20.rs2[31:0]$205
+   252/386: $2\branch_compute$func$sodor_formal.v:256$20.rs1[31:0]$204
+   253/386: $2\branch_compute$func$sodor_formal.v:256$20.$result[31:0]$203
+   254/386: $2\get_funct3$func$sodor_formal.v:249$19.inst[31:0]$202
+   255/386: $2\get_funct3$func$sodor_formal.v:249$19.$result[2:0]$201
+   256/386: $2\get_b_imm$func$sodor_formal.v:248$18.inst[31:0]$200
+   257/386: $2\get_b_imm$func$sodor_formal.v:248$18.$result[31:0]$199
+   258/386: $2\get_rs2$func$sodor_formal.v:247$17.inst[31:0]$198
+   259/386: $2\get_rs2$func$sodor_formal.v:247$17.$result[4:0]$197
+   260/386: $2\get_rs1$func$sodor_formal.v:246$16.inst[31:0]$196
+   261/386: $2\get_rs1$func$sodor_formal.v:246$16.$result[4:0]$195
+   262/386: $2\sra$func$sodor_formal.v:148$15.shamt[4:0]$194
+   263/386: $2\sra$func$sodor_formal.v:148$15.d[63:0]$193
+   264/386: $2\sra$func$sodor_formal.v:148$15.$result[31:0]$192
+   265/386: $2\alu_compute_i$func$sodor_formal.v:237$14.funct3[2:0]$191
+   266/386: $2\alu_compute_i$func$sodor_formal.v:237$14.imm_data[31:0]$190
+   267/386: $2\alu_compute_i$func$sodor_formal.v:237$14.reg_data[31:0]$189
+   268/386: $2\alu_compute_i$func$sodor_formal.v:237$14.$result[31:0]$188
+   269/386: $2\get_funct3$func$sodor_formal.v:231$13.inst[31:0]$187
+   270/386: $2\get_funct3$func$sodor_formal.v:231$13.$result[2:0]$186
+   271/386: $2\get_rd$func$sodor_formal.v:230$12.inst[31:0]$185
+   272/386: $2\get_rd$func$sodor_formal.v:230$12.$result[4:0]$184
+   273/386: $2\get_i_imm$func$sodor_formal.v:229$11.inst[31:0]$183
+   274/386: $2\get_i_imm$func$sodor_formal.v:229$11.$result[31:0]$182
+   275/386: $2\get_rs1$func$sodor_formal.v:228$10.inst[31:0]$181
+   276/386: $2\get_rs1$func$sodor_formal.v:228$10.$result[4:0]$180
+   277/386: $2\branch_pc[31:0]
+   278/386: $2\imm_data[31:0]
+   279/386: $1\pc[31:0]
+   280/386: $1\i[31:0]
+   281/386: $1\regfile[31][31:0]
+   282/386: $1\regfile[30][31:0]
+   283/386: $1\regfile[29][31:0]
+   284/386: $1\regfile[28][31:0]
+   285/386: $1\regfile[27][31:0]
+   286/386: $1\regfile[26][31:0]
+   287/386: $1\regfile[25][31:0]
+   288/386: $1\regfile[24][31:0]
+   289/386: $1\regfile[23][31:0]
+   290/386: $1\regfile[22][31:0]
+   291/386: $1\regfile[21][31:0]
+   292/386: $1\regfile[20][31:0]
+   293/386: $1\regfile[19][31:0]
+   294/386: $1\regfile[18][31:0]
+   295/386: $1\regfile[17][31:0]
+   296/386: $1\regfile[16][31:0]
+   297/386: $1\regfile[15][31:0]
+   298/386: $1\regfile[14][31:0]
+   299/386: $1\regfile[13][31:0]
+   300/386: $1\regfile[12][31:0]
+   301/386: $1\regfile[11][31:0]
+   302/386: $1\regfile[10][31:0]
+   303/386: $1\regfile[9][31:0]
+   304/386: $1\regfile[8][31:0]
+   305/386: $1\regfile[7][31:0]
+   306/386: $1\regfile[6][31:0]
+   307/386: $1\regfile[5][31:0]
+   308/386: $1\regfile[4][31:0]
+   309/386: $1\regfile[3][31:0]
+   310/386: $1\regfile[2][31:0]
+   311/386: $1\regfile[1][31:0]
+   312/386: $1\regfile[0][31:0]
+   313/386: $1$mem2reg_rd$\regfile$sodor_formal.v:253$27_DATA[31:0]$160
+   314/386: $1$mem2reg_rd$\regfile$sodor_formal.v:253$27_ADDR[4:0]$159
+   315/386: $1$mem2reg_rd$\regfile$sodor_formal.v:252$26_DATA[31:0]$158
+   316/386: $1$mem2reg_rd$\regfile$sodor_formal.v:252$26_ADDR[4:0]$157
+   317/386: $1$mem2reg_wr$\regfile$sodor_formal.v:240$25_DATA[31:0]$156
+   318/386: $1$mem2reg_wr$\regfile$sodor_formal.v:240$25_ADDR[4:0]$155
+   319/386: $1$mem2reg_rd$\regfile$sodor_formal.v:234$24_DATA[31:0]$154
+   320/386: $1$mem2reg_rd$\regfile$sodor_formal.v:234$24_ADDR[4:0]$153
+   321/386: $1$mem2reg_wr$\regfile$sodor_formal.v:222$23_DATA[31:0]$152
+   322/386: $1$mem2reg_wr$\regfile$sodor_formal.v:222$23_ADDR[4:0]$151
+   323/386: $1$mem2reg_rd$\regfile$sodor_formal.v:216$22_DATA[31:0]$150
+   324/386: $1$mem2reg_rd$\regfile$sodor_formal.v:216$22_ADDR[4:0]$149
+   325/386: $1$mem2reg_rd$\regfile$sodor_formal.v:215$21_DATA[31:0]$148
+   326/386: $1$mem2reg_rd$\regfile$sodor_formal.v:215$21_ADDR[4:0]$147
+   327/386: $1\branch_compute$func$sodor_formal.v:256$20.funct3[2:0]$146
+   328/386: $1\branch_compute$func$sodor_formal.v:256$20.imm_data[31:0]$145
+   329/386: $1\branch_compute$func$sodor_formal.v:256$20.pc[31:0]$144
+   330/386: $1\branch_compute$func$sodor_formal.v:256$20.rs2[31:0]$143
+   331/386: $1\branch_compute$func$sodor_formal.v:256$20.rs1[31:0]$142
+   332/386: $1\branch_compute$func$sodor_formal.v:256$20.$result[31:0]$141
+   333/386: $1\get_funct3$func$sodor_formal.v:249$19.inst[31:0]$140
+   334/386: $1\get_funct3$func$sodor_formal.v:249$19.$result[2:0]$139
+   335/386: $1\get_b_imm$func$sodor_formal.v:248$18.inst[31:0]$138
+   336/386: $1\get_b_imm$func$sodor_formal.v:248$18.$result[31:0]$137
+   337/386: $1\get_rs2$func$sodor_formal.v:247$17.inst[31:0]$136
+   338/386: $1\get_rs2$func$sodor_formal.v:247$17.$result[4:0]$135
+   339/386: $1\get_rs1$func$sodor_formal.v:246$16.inst[31:0]$134
+   340/386: $1\get_rs1$func$sodor_formal.v:246$16.$result[4:0]$133
+   341/386: $1\sra$func$sodor_formal.v:148$15.shamt[4:0]$132
+   342/386: $1\sra$func$sodor_formal.v:148$15.d[63:0]$131
+   343/386: $1\sra$func$sodor_formal.v:148$15.$result[31:0]$130
+   344/386: $1\alu_compute_i$func$sodor_formal.v:237$14.funct3[2:0]$129
+   345/386: $1\alu_compute_i$func$sodor_formal.v:237$14.imm_data[31:0]$128
+   346/386: $1\alu_compute_i$func$sodor_formal.v:237$14.reg_data[31:0]$127
+   347/386: $1\alu_compute_i$func$sodor_formal.v:237$14.$result[31:0]$126
+   348/386: $1\get_funct3$func$sodor_formal.v:231$13.inst[31:0]$125
+   349/386: $1\get_funct3$func$sodor_formal.v:231$13.$result[2:0]$124
+   350/386: $1\get_rd$func$sodor_formal.v:230$12.inst[31:0]$123
+   351/386: $1\get_rd$func$sodor_formal.v:230$12.$result[4:0]$122
+   352/386: $1\get_i_imm$func$sodor_formal.v:229$11.inst[31:0]$121
+   353/386: $1\get_i_imm$func$sodor_formal.v:229$11.$result[31:0]$120
+   354/386: $1\get_rs1$func$sodor_formal.v:228$10.inst[31:0]$119
+   355/386: $1\get_rs1$func$sodor_formal.v:228$10.$result[4:0]$118
+   356/386: $1\sra$func$sodor_formal.v:162$9.shamt[4:0]$117
+   357/386: $1\sra$func$sodor_formal.v:162$9.d[63:0]$116
+   358/386: $1\sra$func$sodor_formal.v:162$9.$result[31:0]$115
+   359/386: $1\alu_compute_r$func$sodor_formal.v:219$8.funct3[2:0]$114
+   360/386: $1\alu_compute_r$func$sodor_formal.v:219$8.funct7[6:0]$113
+   361/386: $1\alu_compute_r$func$sodor_formal.v:219$8.rs2_data[31:0]$112
+   362/386: $1\alu_compute_r$func$sodor_formal.v:219$8.rs1_data[31:0]$111
+   363/386: $1\alu_compute_r$func$sodor_formal.v:219$8.$result[31:0]$110
+   364/386: $1\get_funct7$func$sodor_formal.v:212$7.inst[31:0]$109
+   365/386: $1\get_funct7$func$sodor_formal.v:212$7.$result[6:0]$108
+   366/386: $1\get_funct3$func$sodor_formal.v:211$6.inst[31:0]$107
+   367/386: $1\get_funct3$func$sodor_formal.v:211$6.$result[2:0]$106
+   368/386: $1\get_rd$func$sodor_formal.v:210$5.inst[31:0]$105
+   369/386: $1\get_rd$func$sodor_formal.v:210$5.$result[4:0]$104
+   370/386: $1\get_rs2$func$sodor_formal.v:209$4.inst[31:0]$103
+   371/386: $1\get_rs2$func$sodor_formal.v:209$4.$result[4:0]$102
+   372/386: $1\get_rs1$func$sodor_formal.v:208$3.inst[31:0]$101
+   373/386: $1\get_rs1$func$sodor_formal.v:208$3.$result[4:0]$100
+   374/386: $1\get_opcode$func$sodor_formal.v:203$2.inst[31:0]$99
+   375/386: $1\get_opcode$func$sodor_formal.v:203$2.$result[6:0]$98
+   376/386: $1\branch_pc[31:0]
+   377/386: $1\alu_out_data[31:0]
+   378/386: $1\imm_data[31:0]
+   379/386: $1\rs2_data[31:0]
+   380/386: $1\rs1_data[31:0]
+   381/386: $1\rd[4:0]
+   382/386: $1\rs2[4:0]
+   383/386: $1\rs1[4:0]
+   384/386: $1\opcode[6:0]
+   385/386: $1\funct7[6:0]
+   386/386: $1\funct3[2:0]
+Creating decoders for process `\sodor_formal.$proc$sodor_formal.v:23$28'.
+     1/2: $0\reset[0:0]
+     2/2: $0\init[0:0]
+
+3.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\sodor_formal.\pc' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5159' with positive edge clock.
+Creating register for signal `\sodor_formal.\funct3' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5160' with positive edge clock.
+Creating register for signal `\sodor_formal.\funct7' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5161' with positive edge clock.
+Creating register for signal `\sodor_formal.\opcode' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5162' with positive edge clock.
+Creating register for signal `\sodor_formal.\rs1' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5163' with positive edge clock.
+Creating register for signal `\sodor_formal.\rs2' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5164' with positive edge clock.
+Creating register for signal `\sodor_formal.\rd' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5165' with positive edge clock.
+Creating register for signal `\sodor_formal.\rs1_data' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5166' with positive edge clock.
+Creating register for signal `\sodor_formal.\rs2_data' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5167' with positive edge clock.
+Creating register for signal `\sodor_formal.\imm_data' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5168' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_out_data' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5169' with positive edge clock.
+Creating register for signal `\sodor_formal.\branch_pc' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5170' with positive edge clock.
+Creating register for signal `\sodor_formal.\i' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5171' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_opcode$func$sodor_formal.v:203$2.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5172' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_opcode$func$sodor_formal.v:203$2.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5173' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs1$func$sodor_formal.v:208$3.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5174' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs1$func$sodor_formal.v:208$3.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5175' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs2$func$sodor_formal.v:209$4.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5176' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs2$func$sodor_formal.v:209$4.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5177' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rd$func$sodor_formal.v:210$5.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5178' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rd$func$sodor_formal.v:210$5.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5179' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_funct3$func$sodor_formal.v:211$6.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5180' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_funct3$func$sodor_formal.v:211$6.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5181' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_funct7$func$sodor_formal.v:212$7.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5182' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_funct7$func$sodor_formal.v:212$7.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5183' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_compute_r$func$sodor_formal.v:219$8.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5184' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_compute_r$func$sodor_formal.v:219$8.rs1_data' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5185' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_compute_r$func$sodor_formal.v:219$8.rs2_data' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5186' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_compute_r$func$sodor_formal.v:219$8.funct7' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5187' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_compute_r$func$sodor_formal.v:219$8.funct3' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5188' with positive edge clock.
+Creating register for signal `\sodor_formal.\sra$func$sodor_formal.v:162$9.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5189' with positive edge clock.
+Creating register for signal `\sodor_formal.\sra$func$sodor_formal.v:162$9.d' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5190' with positive edge clock.
+Creating register for signal `\sodor_formal.\sra$func$sodor_formal.v:162$9.shamt' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5191' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs1$func$sodor_formal.v:228$10.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5192' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs1$func$sodor_formal.v:228$10.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5193' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_i_imm$func$sodor_formal.v:229$11.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5194' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_i_imm$func$sodor_formal.v:229$11.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5195' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rd$func$sodor_formal.v:230$12.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5196' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rd$func$sodor_formal.v:230$12.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5197' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_funct3$func$sodor_formal.v:231$13.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5198' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_funct3$func$sodor_formal.v:231$13.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5199' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_compute_i$func$sodor_formal.v:237$14.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5200' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_compute_i$func$sodor_formal.v:237$14.reg_data' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5201' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_compute_i$func$sodor_formal.v:237$14.imm_data' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5202' with positive edge clock.
+Creating register for signal `\sodor_formal.\alu_compute_i$func$sodor_formal.v:237$14.funct3' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5203' with positive edge clock.
+Creating register for signal `\sodor_formal.\sra$func$sodor_formal.v:148$15.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5204' with positive edge clock.
+Creating register for signal `\sodor_formal.\sra$func$sodor_formal.v:148$15.d' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5205' with positive edge clock.
+Creating register for signal `\sodor_formal.\sra$func$sodor_formal.v:148$15.shamt' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5206' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs1$func$sodor_formal.v:246$16.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5207' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs1$func$sodor_formal.v:246$16.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5208' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs2$func$sodor_formal.v:247$17.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5209' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_rs2$func$sodor_formal.v:247$17.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5210' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_b_imm$func$sodor_formal.v:248$18.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5211' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_b_imm$func$sodor_formal.v:248$18.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5212' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_funct3$func$sodor_formal.v:249$19.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5213' with positive edge clock.
+Creating register for signal `\sodor_formal.\get_funct3$func$sodor_formal.v:249$19.inst' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5214' with positive edge clock.
+Creating register for signal `\sodor_formal.\branch_compute$func$sodor_formal.v:256$20.$result' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5215' with positive edge clock.
+Creating register for signal `\sodor_formal.\branch_compute$func$sodor_formal.v:256$20.rs1' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5216' with positive edge clock.
+Creating register for signal `\sodor_formal.\branch_compute$func$sodor_formal.v:256$20.rs2' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5217' with positive edge clock.
+Creating register for signal `\sodor_formal.\branch_compute$func$sodor_formal.v:256$20.pc' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5218' with positive edge clock.
+Creating register for signal `\sodor_formal.\branch_compute$func$sodor_formal.v:256$20.imm_data' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5219' with positive edge clock.
+Creating register for signal `\sodor_formal.\branch_compute$func$sodor_formal.v:256$20.funct3' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5220' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[0]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5221' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[1]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5222' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[2]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5223' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[3]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5224' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[4]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5225' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[5]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5226' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[6]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5227' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[7]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5228' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[8]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5229' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[9]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5230' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[10]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5231' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[11]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5232' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[12]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5233' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[13]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5234' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[14]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5235' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[15]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5236' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[16]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5237' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[17]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5238' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[18]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5239' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[19]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5240' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[20]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5241' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[21]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5242' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[22]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5243' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[23]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5244' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[24]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5245' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[25]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5246' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[26]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5247' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[27]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5248' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[28]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5249' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[29]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5250' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[30]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5251' with positive edge clock.
+Creating register for signal `\sodor_formal.\regfile[31]' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5252' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:215$21_ADDR' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5253' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:215$21_DATA' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5254' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:216$22_ADDR' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5255' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:216$22_DATA' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5256' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_wr$\regfile$sodor_formal.v:222$23_ADDR' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5257' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_wr$\regfile$sodor_formal.v:222$23_DATA' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5258' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:234$24_ADDR' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5259' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:234$24_DATA' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5260' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_wr$\regfile$sodor_formal.v:240$25_ADDR' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5261' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_wr$\regfile$sodor_formal.v:240$25_DATA' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5262' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:252$26_ADDR' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5263' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:252$26_DATA' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5264' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:253$27_ADDR' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5265' with positive edge clock.
+Creating register for signal `\sodor_formal.$mem2reg_rd$\regfile$sodor_formal.v:253$27_DATA' using process `\sodor_formal.$proc$sodor_formal.v:191$34'.
+  created $dff cell `$procdff$5266' with positive edge clock.
+Creating register for signal `\sodor_formal.\init' using process `\sodor_formal.$proc$sodor_formal.v:23$28'.
+  created $dff cell `$procdff$5267' with positive edge clock.
+Creating register for signal `\sodor_formal.\reset' using process `\sodor_formal.$proc$sodor_formal.v:23$28'.
+  created $dff cell `$procdff$5268' with positive edge clock.
+Creating register for signal `\sodor_formal.\counter' using process `\sodor_formal.$proc$sodor_formal.v:23$28'.
+  created $dff cell `$procdff$5269' with positive edge clock.
+
+3.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `sodor_formal.$proc$sodor_formal.v:0$381'.
+Found and cleaned up 11 empty switches in `\sodor_formal.$proc$sodor_formal.v:191$34'.
+Removing empty process `sodor_formal.$proc$sodor_formal.v:191$34'.
+Found and cleaned up 2 empty switches in `\sodor_formal.$proc$sodor_formal.v:23$28'.
+Removing empty process `sodor_formal.$proc$sodor_formal.v:23$28'.
+Cleaned up 13 empty switches.
+
+4. Executing MEMORY pass.
+
+4.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+4.2. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+4.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \sodor_formal..
+Removed 651 unused cells and 1986 unused wires.
+<suppressed ~695 debug messages>
+
+4.4. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+4.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \sodor_formal..
+
+4.6. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.7. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+5. Executing Verilog backend.
+Dumping module `\sodor_formal'.
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: ff2ea3b605, CPU: user 1.24s system 0.07s, MEM: 41.30 MB peak
+Yosys 0.9+4052 (git sha1 a58571d0, clang 6.0.0-1ubuntu2 -fPIC -Os)
+Time spent: 31% 1x proc_mux (0 sec), 21% 2x opt_clean (0 sec), ...

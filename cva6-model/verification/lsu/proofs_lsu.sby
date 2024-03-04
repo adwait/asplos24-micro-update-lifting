@@ -1,0 +1,153 @@
+[tasks]
+taskBMC12_equiv_su task_bmc12 files_equiv_su
+taskBMC30_equiv_su task_bmc30 files_equiv_su
+taskBMC12_equiv_lsu task_bmc12 files_equiv_lsu
+taskBMC30_equiv_lsu task_bmc30 files_equiv_lsu
+taskBMC12_ni_lsu task_bmc12 files_ni_lsu
+taskBMC15_ni_lsu task_bmc15 files_ni_lsu
+taskBMC20_ni_lsu task_bmc20 files_ni_lsu
+taskBMC30_ni_lsu task_bmc30 files_ni_lsu
+taskBMC40_ni_lsu task_bmc40 files_ni_lsu
+taskBMC20_ni_model_lsu task_bmc20 files_ni_model_lsu
+taskBMC30_ni_model_lsu task_bmc30 files_ni_model_lsu
+taskBMC40_ni_model_lsu task_bmc40 files_ni_model_lsu
+
+[options]
+task_bmc12:
+mode bmc
+depth 12
+--
+
+task_bmc15:
+mode bmc
+depth 15
+--
+
+task_bmc20:
+mode bmc
+depth 20
+--
+
+task_bmc30:
+mode bmc
+depth 30
+--
+
+task_bmc40:
+mode bmc
+depth 40
+--
+
+[engines]
+task_bmc12:
+smtbmc boolector
+--
+
+task_bmc15:
+smtbmc boolector
+--
+
+task_bmc20:
+smtbmc boolector
+--
+
+task_bmc30:
+smtbmc boolector
+--
+
+task_bmc40:
+smtbmc boolector
+--
+
+[script]
+files_ni_lsu:
+read -formal -DEXPOSE_STATE lsu/cva6_lsu_formal.v
+read -formal -DEXPOSE_STATE ../build/load_store_unit.v
+read -formal ../build/shift_reg.v
+read -formal -DEXPOSE_STATE ../build/store_unit.v
+read -formal -DEXPOSE_STATE ../build/store_buffer.v
+read -formal ../build/amo_buffer.v
+read -formal -DEXPOSE_STATE ../build/load_unit.v
+read -formal ../build/lsu_bypass.v
+read -formal -DEXPOSE_STATE -DUSE_SHIM lsu/cva6_processor_shim.v
+read -formal -DEXPOSE_STATE lsu/cva6_lsu_shim.v
+prep -top cva6_lsu_formal
+--
+
+files_ni_model_lsu:
+read -formal -DEXPOSE_STATE lsu/cva6_lsu_formal.v
+read -formal -DEXPOSE_STATE -DUSE_MODEL lsu/cva6_processor_shim.v
+read -formal -DEXPOSE_STATE lsu/cva6_lsu_model.v
+prep -top cva6_lsu_formal
+--
+
+files_equiv_lsu:
+read -formal -DEXPOSE_STATE lsu/cva6_lsu_equiv.v
+read -formal -DEXPOSE_STATE ../build/load_store_unit.v
+read -formal ../build/shift_reg.v
+read -formal -DEXPOSE_STATE ../build/store_unit.v
+read -formal -DEXPOSE_STATE ../build/store_buffer.v
+read -formal ../build/amo_buffer.v
+read -formal -DEXPOSE_STATE ../build/load_unit.v
+read -formal ../build/lsu_bypass.v
+read -formal -DEXPOSE_STATE lsu/cva6_lsu_model.v
+read -formal -DEXPOSE_STATE lsu/cva6_lsu_shim.v
+prep -top cva6_lsu_model_tb
+--
+
+files_equiv_su:
+read -formal -DEXPOSE_STATE lsu/cva6_su_equiv.v
+read -formal -DEXPOSE_STATE ../build/store_unit.v
+read -formal -DEXPOSE_STATE ../build/store_buffer.v
+read -formal ../build/amo_buffer.v
+read -formal -DEXPOSE_STATE lsu/cva6_su_model.v
+prep -top store_unit_model_tb
+--
+
+[files]
+files_ni_lsu:
+lsu/cva6_lsu_formal.v
+../build/load_store_unit.v
+../build/shift_reg.v
+../build/store_unit.v
+../build/store_buffer.v
+../build/amo_buffer.v
+../build/load_unit.v
+../build/lsu_bypass.v
+lsu/cva6_processor_shim.v
+lsu/cva6_lsu_shim.v
+--
+
+files_ni_model_lsu:
+lsu/cva6_lsu_formal.v
+../build/load_store_unit.v
+../build/shift_reg.v
+../build/store_unit.v
+../build/store_buffer.v
+../build/amo_buffer.v
+../build/load_unit.v
+../build/lsu_bypass.v
+lsu/cva6_processor_shim.v
+lsu/cva6_lsu_model.v
+--
+
+files_equiv_lsu:
+lsu/cva6_lsu_equiv.v
+../build/load_store_unit.v
+../build/shift_reg.v
+../build/store_unit.v
+../build/store_buffer.v
+../build/amo_buffer.v
+../build/load_unit.v
+../build/lsu_bypass.v
+lsu/cva6_lsu_model.v
+lsu/cva6_lsu_shim.v
+--
+
+files_equiv_su:
+lsu/cva6_su_equiv.v
+../build/store_unit.v
+../build/store_buffer.v
+../build/amo_buffer.v
+lsu/cva6_su_model.v
+--

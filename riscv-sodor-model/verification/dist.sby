@@ -1,0 +1,36 @@
+[tasks]
+taskBMC12_distinguish_sodor5 task_bmc12 files_distinguish_sodor5
+taskBMC20_distinguish_sodor5 task_bmc20 files_distinguish_sodor5
+
+[options]
+task_bmc12:
+mode bmc
+depth 12
+--
+
+task_bmc20:
+mode bmc
+depth 20
+--
+
+[engines]
+task_bmc12:
+smtbmc boolector
+--
+
+task_bmc20:
+smtbmc boolector
+--
+
+[script]
+files_distinguish_sodor5:
+read -formal riscv-sodor-model/verification/sodor5/sodor5_distinguisher.v
+read -formal riscv-sodor-model/rtl/sodor5_dmem_top.v
+prep -top sodor5_verif
+--
+
+[files]
+files_distinguish_sodor5:
+riscv-sodor-model/verification/sodor5/sodor5_distinguisher.v
+riscv-sodor-model/rtl/sodor5_dmem_top.v
+--

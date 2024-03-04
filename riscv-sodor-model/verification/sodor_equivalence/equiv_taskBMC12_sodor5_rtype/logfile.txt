@@ -1,0 +1,341 @@
+SBY 17:41:04 [equiv_taskBMC12_sodor5_rtype] Removing directory 'equiv_taskBMC12_sodor5_rtype'.
+SBY 17:41:04 [equiv_taskBMC12_sodor5_rtype] Copy 'sodor5_bmc.v' to 'equiv_taskBMC12_sodor5_rtype/src/sodor5_bmc.v'.
+SBY 17:41:04 [equiv_taskBMC12_sodor5_rtype] Copy 'sodor5_model_rtype_full.v' to 'equiv_taskBMC12_sodor5_rtype/src/sodor5_model_rtype_full.v'.
+SBY 17:41:04 [equiv_taskBMC12_sodor5_rtype] Copy 'sodor5_dmem_top.v' to 'equiv_taskBMC12_sodor5_rtype/src/sodor5_dmem_top.v'.
+SBY 17:41:04 [equiv_taskBMC12_sodor5_rtype] engine_0: smtbmc boolector
+SBY 17:41:04 [equiv_taskBMC12_sodor5_rtype] base: starting process "cd equiv_taskBMC12_sodor5_rtype/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 17:41:04 [equiv_taskBMC12_sodor5_rtype] base: Warning: Replacing memory \instr_queue_valid with list of registers. See sodor5_model_rtype_full.v:585
+SBY 17:41:04 [equiv_taskBMC12_sodor5_rtype] base: Warning: Replacing memory \instr_queue with list of registers. See sodor5_model_rtype_full.v:584
+SBY 17:41:04 [equiv_taskBMC12_sodor5_rtype] base: Warning: Replacing memory \regfile with list of registers. See sodor5_model_rtype_full.v:803, sodor5_model_rtype_full.v:673, sodor5_model_rtype_full.v:579
+SBY 17:41:05 [equiv_taskBMC12_sodor5_rtype] base: sodor5_model_rtype_full.v:768: Warning: Identifier `\imm_stype_sext' is implicitly declared.
+SBY 17:41:05 [equiv_taskBMC12_sodor5_rtype] base: sodor5_model_rtype_full.v:771: Warning: Identifier `\buf__in_io_dmem_resp_bits_data' is implicitly declared.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [31] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [30] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [29] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [28] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [27] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [26] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [25] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [24] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [23] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [22] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [21] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [20] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [19] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [18] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [17] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [16] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [15] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [14] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [13] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [12] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [11] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [10] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [9] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [8] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [7] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [6] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [5] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [4] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [3] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_inst [0] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [31] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [30] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [29] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [28] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [27] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [26] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [25] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [24] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [23] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [22] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [21] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [20] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [19] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [18] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [17] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [16] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [15] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [14] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [13] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [12] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [11] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [10] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [9] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [8] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [7] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [6] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [5] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [4] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [3] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_inst [0] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [31] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [30] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [29] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [28] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [27] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [26] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [25] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [24] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [23] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [22] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [21] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [20] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [19] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [18] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [17] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [16] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [15] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [14] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [13] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [12] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [11] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [10] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [9] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [8] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [7] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [6] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [5] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [4] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [3] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_inst [0] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [31] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [30] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [29] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [28] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [27] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [26] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [25] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [24] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [23] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [22] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [21] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [20] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [19] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [18] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [17] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [16] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [15] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [14] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [13] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [12] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [11] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [10] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [9] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [8] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [7] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [6] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [5] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [4] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [3] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_data [0] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [31] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [30] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [29] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [28] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [27] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [26] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [25] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [24] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [23] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [22] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [21] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [20] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [19] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [18] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [17] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [16] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [15] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [14] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [13] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [12] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [11] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [10] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [9] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [8] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [7] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [6] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [5] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [4] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [3] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_addr [0] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_lb_table_valid is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [31] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [30] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [29] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [28] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [27] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [26] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [25] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [24] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [23] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [22] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [21] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [20] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [19] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [18] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [17] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [16] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [15] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [14] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [13] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [12] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [11] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [10] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [9] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [8] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [7] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [6] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [5] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [4] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [3] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_mem_reg_pc [0] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [31] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [30] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [29] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [28] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [27] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [26] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [25] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [24] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [23] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [22] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [21] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [20] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [19] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [18] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [17] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [16] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [15] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [14] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [13] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [12] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [11] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [10] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [9] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [8] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [7] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [6] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [5] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [4] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [3] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_exe_reg_pc [0] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [31] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [30] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [29] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [28] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [27] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [26] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [25] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [24] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [23] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [22] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [21] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [20] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [19] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [18] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [17] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [16] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [15] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [14] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [13] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [12] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [11] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [10] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [9] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [8] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [7] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [6] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [5] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [4] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [3] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_dec_reg_pc [0] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [31] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [30] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [29] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [28] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [27] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [26] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [25] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [24] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [23] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [22] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [21] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [20] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [19] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [18] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [17] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [16] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [15] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [14] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [13] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [12] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [11] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [10] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [9] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [8] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [7] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [6] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [5] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [4] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [3] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_if_reg_pc [0] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_funct3 [2] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_funct3 [1] is used but has no driver.
+SBY 17:41:10 [equiv_taskBMC12_sodor5_rtype] base: Warning: Wire sodor5_model.\copy_funct3 [0] is used but has no driver.
+SBY 17:41:22 [equiv_taskBMC12_sodor5_rtype] base: finished (returncode=0)
+SBY 17:41:22 [equiv_taskBMC12_sodor5_rtype] smt2: starting process "cd equiv_taskBMC12_sodor5_rtype/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 17:41:24 [equiv_taskBMC12_sodor5_rtype] smt2: finished (returncode=0)
+SBY 17:41:24 [equiv_taskBMC12_sodor5_rtype] engine_0: starting process "cd equiv_taskBMC12_sodor5_rtype; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 17:41:24 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:00  Solver: boolector
+SBY 17:41:28 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:04  Checking assumptions in step 0..
+SBY 17:41:28 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:04  Checking assertions in step 0..
+SBY 17:41:33 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:09  Checking assumptions in step 1..
+SBY 17:41:34 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:09  Checking assertions in step 1..
+SBY 17:41:40 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:15  Checking assumptions in step 2..
+SBY 17:41:40 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:16  Checking assertions in step 2..
+SBY 17:41:45 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:21  Checking assumptions in step 3..
+SBY 17:41:45 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:21  Checking assertions in step 3..
+SBY 17:41:50 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:26  Checking assumptions in step 4..
+SBY 17:41:50 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:26  Checking assertions in step 4..
+SBY 17:41:55 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:31  Checking assumptions in step 5..
+SBY 17:41:55 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:31  Checking assertions in step 5..
+SBY 17:42:01 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:36  Checking assumptions in step 6..
+SBY 17:42:01 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:37  Checking assertions in step 6..
+SBY 17:42:08 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:44  Checking assumptions in step 7..
+SBY 17:42:12 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:47  Checking assertions in step 7..
+SBY 17:42:22 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:00:58  Checking assumptions in step 8..
+SBY 17:42:25 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:01:01  Checking assertions in step 8..
+SBY 17:42:33 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:01:09  Checking assumptions in step 9..
+SBY 17:42:36 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:01:11  Checking assertions in step 9..
+SBY 17:43:39 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:02:14  Checking assumptions in step 10..
+SBY 17:43:48 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:02:24  Checking assertions in step 10..
+SBY 17:44:50 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:03:26  waiting for solver (1 minute)
+SBY 17:46:06 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:04:42  Checking assumptions in step 11..
+SBY 17:46:17 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:04:53  Checking assertions in step 11..
+SBY 17:47:27 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:06:03  waiting for solver (1 minute)
+SBY 17:50:17 [equiv_taskBMC12_sodor5_rtype] engine_0: ##   0:08:52  Status: passed
+SBY 17:50:17 [equiv_taskBMC12_sodor5_rtype] engine_0: finished (returncode=0)
+SBY 17:50:17 [equiv_taskBMC12_sodor5_rtype] engine_0: Status returned by engine: pass
+SBY 17:50:17 [equiv_taskBMC12_sodor5_rtype] summary: Elapsed clock time [H:MM:SS (secs)]: 0:09:12 (552)
+SBY 17:50:17 [equiv_taskBMC12_sodor5_rtype] summary: Elapsed process time [H:MM:SS (secs)]: 0:09:27 (567)
+SBY 17:50:17 [equiv_taskBMC12_sodor5_rtype] summary: engine_0 (smtbmc boolector) returned pass
+SBY 17:50:17 [equiv_taskBMC12_sodor5_rtype] DONE (PASS, rc=0)

@@ -1,0 +1,23 @@
+[options]
+mode bmc
+depth 12
+
+
+[engines]
+smtbmc boolector
+
+
+[script]
+
+
+read -formal -DILSTYPE sodor5_bmc.v
+read -formal sodor5_model_ilstype_full.v
+read -formal sodor5_dmem_top.v
+prep -top sodor5_verif
+
+[files]
+
+
+sodor5_bmc.v
+sodor5_model_ilstype_full.v
+sodor5_dmem_top.v

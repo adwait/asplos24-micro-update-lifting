@@ -1,0 +1,74 @@
+[tasks]
+taskBMC30_ni_lsu task_bmc30 files_ni_lsu
+taskBMC40_ni_lsu task_bmc40 files_ni_lsu
+taskBMC30_ni_model_lsu task_bmc30 files_ni_model_lsu
+taskBMC40_ni_model_lsu task_bmc40 files_ni_model_lsu
+
+[options]
+task_bmc30:
+mode bmc
+depth 30
+--
+
+task_bmc40:
+mode bmc
+depth 40
+--
+
+[engines]
+task_bmc30:
+smtbmc boolector
+--
+
+task_bmc40:
+smtbmc boolector
+--
+
+[script]
+files_ni_lsu:
+read -formal -DEXPOSE_STATE cva6_lsu_formal.v
+read -formal -DEXPOSE_STATE load_store_unit.v
+read -formal shift_reg.v
+read -formal -DEXPOSE_STATE store_unit.v
+read -formal -DEXPOSE_STATE store_buffer.v
+read -formal amo_buffer.v
+read -formal -DEXPOSE_STATE load_unit.v
+read -formal lsu_bypass.v
+read -formal -DEXPOSE_STATE -DUSE_SHIM cva6_processor_shim.v
+read -formal -DEXPOSE_STATE cva6_lsu_shim.v
+prep -top cva6_lsu_formal
+--
+
+files_ni_model_lsu:
+read -formal -DEXPOSE_STATE cva6_lsu_formal.v
+read -formal -DEXPOSE_STATE -DUSE_MODEL cva6_processor_shim.v
+read -formal -DEXPOSE_STATE cva6_lsu_model.v
+prep -top cva6_lsu_formal
+--
+
+[files]
+files_ni_lsu:
+cva6_lsu_formal.v
+load_store_unit.v
+shift_reg.v
+store_unit.v
+store_buffer.v
+amo_buffer.v
+load_unit.v
+lsu_bypass.v
+cva6_processor_shim.v
+cva6_lsu_shim.v
+--
+
+files_ni_model_lsu:
+cva6_lsu_formal.v
+load_store_unit.v
+shift_reg.v
+store_unit.v
+store_buffer.v
+amo_buffer.v
+load_unit.v
+lsu_bypass.v
+cva6_processor_shim.v
+cva6_lsu_model.v
+--

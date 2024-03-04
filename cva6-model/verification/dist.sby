@@ -1,0 +1,54 @@
+[tasks]
+taskBMC12_distinguish_tlb task_bmc12 files_distinguish_tlb
+taskBMC15_distinguish_wbuffer task_bmc15 files_distinguish_wbuffer
+
+[options]
+task_bmc12:
+mode bmc
+depth 12
+--
+
+task_bmc15:
+mode bmc
+depth 15
+--
+
+[engines]
+task_bmc12:
+smtbmc boolector
+--
+
+task_bmc15:
+smtbmc boolector
+--
+
+[script]
+files_distinguish_tlb:
+read -formal tlb/cva6_tlb_distinguisher.v
+read -formal ../build/cva6_tlb_sv32.v
+prep -top tlb_tb
+--
+
+files_distinguish_wbuffer:
+read -formal wbuffer/cva6_wbuffer_distinguisher.v
+read -formal ../build/wt_dcache_wbuffer.v 
+read -formal ../build/lzc.v 
+read -formal ../build/rr_arb_tree.v
+read -formal ../build/fifo_v3.v
+prep -top tlb_tb
+--
+
+[files]
+files_distinguish_tlb:
+tlb/cva6_tlb_distinguisher.v
+../build/cva6_tlb_sv32.v
+--
+
+files_distinguish_wbuffer:
+wbuffer/cva6_wbuffer_distinguisher.v
+../build/wt_dcache_wbuffer.v
+../build/lzc.v 
+../build/rr_arb_tree.v
+../build/fifo_v3.v
+--
+

@@ -1,0 +1,27 @@
+[options]
+
+mode bmc
+depth 15
+
+
+[engines]
+
+smtbmc boolector
+
+
+[script]
+read -formal -DEXPOSE_STATE cva6_wbuffer_equiv.v
+read -formal -DEXPOSE_STATE rr_arb_tree.v 
+read -formal -DEXPOSE_STATE lzc.v 
+read -formal -DEXPOSE_STATE fifo_v3.v
+read -formal -DEXPOSE_STATE wt_dcache_wbuffer.v
+read -formal -DEXPOSE_STATE cva6_wbuffer_model.v
+prep -top wbuffer_tb
+
+[files]
+cva6_wbuffer_equiv.v
+wt_dcache_wbuffer.v
+rr_arb_tree.v 
+lzc.v 
+fifo_v3.v
+cva6_wbuffer_model.v

@@ -1,0 +1,202 @@
+
+collapsed2
+(
+(define-fun lb_refill ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (not x1) x2))
+(define-fun lb_invalidate ((x0 Bool) (x1 Bool) (x2 Bool)) Bool x1)
+(define-fun lb_hold ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (and (not x1) (not x2)))
+)
+
+real	0m1.938s
+user	0m1.918s
+sys	0m0.020s
+
+collapsed6
+(
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and (or (not x3) (not x2)) (or (not x1) (not x0))))
+(define-fun hold_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and x2 x3) (and x1 x0)))
+)
+
+real	0m10.412s
+user	0m10.402s
+sys	0m0.010s
+
+collapsed7
+(
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and (or (not x3) (not x2)) (or (not x1) (not x0))))
+(define-fun hold_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and x2 x3) (and x1 x0)))
+)
+
+real	0m10.539s
+user	0m10.533s
+sys	0m0.006s
+
+collapsed10
+(
+(define-fun feed__mem_reg_wbaddr__reg_rd_addr_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (or (and (not x2) (not x1)) (or x3 x4)))
+(define-fun pipeline_hold ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (and (and (not x3) (or x2 x1)) (not x4)))
+)
+
+real	0m5.587s
+user	0m5.579s
+sys	0m0.008s
+
+collapsed11
+(
+(define-fun feed__mem_reg_alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool)) Bool (and (and (not x1) (not x0)) (or (not x2) x3)))
+(define-fun feed__mem_resp__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool)) Bool (and (or (and (not x2) x4) x3) (or x1 x0)))
+(define-fun pipeline_hold ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool)) Bool (and (or (and (or x1 x0) (not x4)) x2) (not x3)))
+)
+
+real	0m40.571s
+user	0m40.533s
+sys	0m0.039s
+
+collapsed13
+(
+(define-fun feed__mem_reg_alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool)) Bool (or (and (not x2) (not x1)) (and x2 x3)))
+(define-fun feed__mem_resp__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool)) Bool (and (and (or x4 x3) (not x2)) (or x2 x1)))
+(define-fun pipeline_hold ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool)) Bool (and (or (and (not x4) x1) x2) (not x3)))
+)
+
+real	0m14.992s
+user	0m14.987s
+sys	0m0.006s
+
+collapsed14
+(
+(define-fun feed__dec_wbaddr__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (or (and (and (not x5) (not x1)) (not x2)) x3))
+(define-fun pipeline_hold ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (and (and (not x3) (or x1 x2)) (not x5)))
+(define-fun zero__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (and (or (not x3) (not x5)) x5))
+)
+
+real	0m19.380s
+user	0m19.356s
+sys	0m0.024s
+
+collapsed15
+(
+(define-fun feed__mem_reg_alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (and (and (or (not x2) x3) (not x0)) (not x1)))
+(define-fun feed__mem_resp__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (and (and (or x1 x0) (or x4 x3)) (or (not x2) x3)))
+(define-fun pipeline_hold ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (and (or (and (or x0 x1) (not x4)) x2) (not x3)))
+)
+
+real	1m22.414s
+user	1m22.375s
+sys	0m0.040s
+
+collapsed16
+(
+(define-fun feed__alu_out__mem_reg_alu_out ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (or (and (not x2) (not x1)) (or x3 x4)))
+(define-fun pipeline_hold ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (and (and (not x3) (or x2 x1)) (not x4)))
+)
+
+real	0m5.592s
+user	0m5.584s
+sys	0m0.008s
+
+collapsed17
+(
+(define-fun feed__exe_reg_wbaddr__mem_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (or (and (not x2) (not x1)) (or x3 x4)))
+(define-fun pipeline_hold ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (and (and (not x3) (or x2 x1)) (not x4)))
+)
+
+real	0m5.421s
+user	0m5.413s
+sys	0m0.008s
+
+collapsed18
+(
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and (or (not x3) (not x2)) (or (not x1) (not x0))))
+(define-fun hold_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and x2 x3) (and x1 x0)))
+)
+
+real	0m10.297s
+user	0m10.294s
+sys	0m0.003s
+
+collapsed19
+(
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and (or (not x3) (not x2)) (or (not x1) (not x0))))
+(define-fun hold_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and x2 x3) (and x1 x0)))
+)
+
+real	0m10.446s
+user	0m10.442s
+sys	0m0.004s
+
+collapsed20
+(
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and (or (not x3) (not x2)) (or (not x1) (not x0))))
+(define-fun hold_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and x2 x3) (and x1 x0)))
+)
+
+real	0m10.330s
+user	0m10.314s
+sys	0m0.016s
+
+collapsed21
+(
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and (or (not x3) (not x2)) (or (not x1) (not x0))))
+(define-fun hold_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and x2 x3) (and x1 x0)))
+)
+
+real	0m10.580s
+user	0m10.575s
+sys	0m0.006s
+
+collapsed22
+(
+(define-fun regs_read ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.015s
+user	0m0.006s
+sys	0m0.009s
+
+collapsed23
+(
+(define-fun regs_read ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.008s
+user	0m0.008s
+sys	0m0.000s
+
+collapsed24
+(
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool)) Bool (or (and (or (not x3) (not x4)) (and (not x0) (not x1))) (not x2)))
+(define-fun hold_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool)) Bool (and (or (or (or x1 x3) x0) (and x3 x2)) (or (and (or x0 x1) x2) (and x4 x2))))
+)
+
+real	0m59.823s
+user	0m59.800s
+sys	0m0.024s
+
+collapsed25
+(
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (and (or (and (not x2) (not x0)) (or (not x3) x4)) (or (not x4) (not x5))))
+(define-fun hold_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool) (x4 Bool) (x5 Bool)) Bool (or (and (or (and x1 x3) x4) (and (or x2 x4) x5)) (and (and (or x2 x0) (not x4)) x3)))
+)
+
+real	19m36.213s
+user	19m36.199s
+sys	0m0.032s
+
+collapsed3
+(
+(define-fun regs_write ((x0 Bool) (x1 Bool) (x2 Bool)) Bool (not x1))
+(define-fun no_regs_write ((x0 Bool) (x1 Bool) (x2 Bool)) Bool x1)
+)
+
+real	0m0.029s
+user	0m0.021s
+sys	0m0.008s
+
+collapsed26
+
+
+(
+(define-fun no_regs_write ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or false x2))
+(define-fun regs_write ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (not x2))
+)
+cvc5 --lang=sygus2 synthclass__regfile.smt2  0.05s user 0.00s system 99% cpu 0.049 total

@@ -1,0 +1,217 @@
+[tasks]
+taskBMC12_sofor1 task_bmc12 files_bmc_sodor1
+taskProve_sodor1 task_ind files_ind_sodor1
+taskBMC12_sodor5 task_bmc12 files_bmc_sodor5
+taskBMC20_sodor5 task_bmc20 files_bmc_sodor5
+taskBMC20_sodor5_full task_bmc20 files_bmc_sodor5_full
+taskBMC20_sodor5_itype task_bmc20 files_bmc_sodor5_itype
+taskBMC16_sodor5_lb task_bmc16 files_lb
+taskBMC16_sodor5_model_lb task_bmc16 files_model_lb
+taskBMC12_sodor5_itype task_bmc12 files_bmc_sodor5_itype
+taskBMC12_sodor5_ilstype task_bmc12 files_bmc_sodor5_ilstype
+taskBMC12_sodor5_rtype task_bmc12 files_bmc_sodor5_rtype
+taskBMC15_sodor5_itype task_bmc15 files_bmc_sodor5_itype
+taskBMC15_sodor5_ilstype task_bmc15 files_bmc_sodor5_ilstype
+taskBMC15_sodor5_rtype task_bmc15 files_bmc_sodor5_rtype
+taskBMC16_sodor5_lb_u task_bmc16 files_lb_u
+taskBMC16_sodor5_model_lb_u task_bmc16 files_model_lb_u
+taskBMC20_sodor5_lb_u task_bmc20 files_lb_u
+taskBMC20_sodor5_model_lb_u task_bmc20 files_model_lb_u
+taskBMC22_sodor5_lb_u task_bmc22 files_lb_u
+taskBMC22_sodor5_model_lb_u task_bmc22 files_model_lb_u
+
+[options]
+task_bmc12:
+mode bmc
+depth 12
+--
+
+task_bmc15:
+mode bmc
+depth 15
+--
+
+task_bmc16:
+mode bmc
+depth 16
+--
+
+task_bmc20:
+mode bmc
+depth 20
+--
+
+task_bmc22:
+mode bmc
+depth 22
+--
+
+task_ind:
+mode prove
+--
+
+[engines]
+task_bmc12:
+smtbmc boolector
+--
+
+task_bmc16:
+smtbmc boolector
+--
+
+task_bmc15:
+smtbmc boolector
+--
+
+task_bmc20:
+smtbmc boolector
+--
+
+task_bmc22:
+smtbmc boolector
+--
+
+task_ind:
+abc pdr
+--
+
+[script]
+files_bmc_sodor1:
+read -formal sodor1/sodor1_bmc.v
+read -formal sodor1/sodor1_model.v
+read -formal ../rtl/sodor1_dmem_top.v
+prep -top sodor1_verif
+--
+
+files_ind_sodor1:
+read -formal sodor1/sodor1_ind.v
+read -formal sodor1/sodor1_model.v
+read -formal ../rtl/sodor1_dmem_top.v
+prep -top sodor1_verif
+--
+
+files_bmc_sodor5:
+read -formal sodor5/sodor5_bmc.v
+read -formal sodor5/sodor5_model.v
+read -formal ../rtl/sodor5_dmem_top.v
+prep -top sodor5_verif
+--
+
+files_bmc_sodor5_full:
+read -formal sodor5/sodor5_bmc.v
+read -formal sodor5/sodor5_model_full.v
+read -formal ../rtl/sodor5_dmem_top.v
+prep -top sodor5_verif
+--
+
+files_bmc_sodor5_itype:
+read -formal -DITYPE sodor5/sodor5_bmc.v
+read -formal sodor5/sodor5_model_itype_full.v
+read -formal ../rtl/sodor5_dmem_top.v
+prep -top sodor5_verif
+--
+
+files_lb:
+read -formal ../rtl/sodor5_dmem_top.v
+read -formal sodor5/sodor5_lb_bmc.v
+prep -top sodor5_verif
+--
+
+files_lb_u:
+read -formal ../rtl/sodor5_dmem_top.v
+read -formal sodor5/sodor5_lb_unified_bmc.v
+prep -top sodor5_verif
+--
+
+files_model_lb:
+read -formal -DLB_VERIF sodor5/sodor5_model_ilstype_full.v
+read -formal sodor5/sodor5_lb_model_bmc.v
+read_verilog -DSODOR5_SIGNALS -formal ../rtl/SimpleDMem.v
+prep -top sodor5_verif
+--
+
+files_model_lb_u:
+read -formal -DLB_VERIF -DRANDOMIZE -DDATAOPT sodor5/sodor5_model_ilstype_full.v
+read -formal -DMODEL sodor5/sodor5_lb_unified_bmc.v
+read_verilog -DSODOR5_SIGNALS -formal ../rtl/SimpleDMem.v
+prep -top sodor5_verif
+--
+
+files_bmc_sodor5_rtype:
+read -formal -DRTYPE sodor5/sodor5_bmc.v
+read -formal sodor5/sodor5_model_rtype_full.v
+read -formal ../rtl/sodor5_dmem_top.v
+prep -top sodor5_verif
+--
+
+files_bmc_sodor5_ilstype:
+read -formal -DILSTYPE sodor5/sodor5_bmc.v
+read -formal sodor5/sodor5_model_ilstype_full.v
+read -formal ../rtl/sodor5_dmem_top.v
+prep -top sodor5_verif
+--
+
+[files]
+files_bmc_sodor1:
+sodor1/sodor1_bmc.v
+sodor1/sodor1_model.v
+../rtl/sodor1_dmem_top.v
+--
+
+files_ind_sodor1:
+sodor1/sodor1_prove.v
+sodor1/sodor1_model.v
+../rtl/sodor1_dmem_top.v
+--
+
+files_bmc_sodor5:
+sodor5/sodor5_bmc.v
+sodor5/sodor5_model.v
+../rtl/sodor5_dmem_top.v
+--
+
+files_bmc_sodor5_full:
+sodor5/sodor5_bmc.v
+sodor5/sodor5_model_full.v
+../rtl/sodor5_dmem_top.v
+--
+
+files_bmc_sodor5_itype:
+sodor5/sodor5_bmc.v
+sodor5/sodor5_model_itype_full.v
+../rtl/sodor5_dmem_top.v
+--
+
+files_lb:
+../rtl/sodor5_dmem_top.v
+sodor5/sodor5_lb_bmc.v
+--
+
+files_model_lb:
+sodor5/sodor5_model_ilstype_full.v
+sodor5/sodor5_lb_model_bmc.v
+../rtl/SimpleDMem.v
+--
+
+files_bmc_sodor5_rtype:
+sodor5/sodor5_bmc.v
+sodor5/sodor5_model_rtype_full.v
+../rtl/sodor5_dmem_top.v
+--
+
+files_bmc_sodor5_ilstype:
+sodor5/sodor5_bmc.v
+sodor5/sodor5_model_ilstype_full.v
+../rtl/sodor5_dmem_top.v
+--
+
+files_lb_u:
+../rtl/sodor5_dmem_top.v
+sodor5/sodor5_lb_unified_bmc.v
+--
+
+files_model_lb_u:
+sodor5/sodor5_model_ilstype_full.v
+sodor5/sodor5_lb_unified_bmc.v
+../rtl/SimpleDMem.v
+--

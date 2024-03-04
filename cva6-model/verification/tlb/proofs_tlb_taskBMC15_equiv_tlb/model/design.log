@@ -1,0 +1,956 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+4052 (git sha1 a58571d0, clang 6.0.0-1ubuntu2 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: cva6_tlb_equiv.v
+Parsing formal SystemVerilog input from `cva6_tlb_equiv.v' to AST representation.
+Storing AST representation for module `$abstract\tlb_tb'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: cva6_tlb_sv32.v
+Parsing formal SystemVerilog input from `cva6_tlb_sv32.v' to AST representation.
+Storing AST representation for module `$abstract\cva6_tlb_sv32'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: cva6_tlb_model.v
+Parsing formal SystemVerilog input from `cva6_tlb_model.v' to AST representation.
+Storing AST representation for module `$abstract\cva6_tlb_model'.
+Successfully finished Verilog frontend.
+
+4. Executing PREP pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\tlb_tb'.
+Generating RTLIL representation for module `\tlb_tb'.
+Warning: wire '\reset' is assigned in a block at cva6_tlb_equiv.v:12.13-12.22.
+Warning: wire '\reset' is assigned in a block at cva6_tlb_equiv.v:151.13-151.23.
+cva6_tlb_equiv.v:111: Warning: Identifier `\reset' is implicitly declared.
+
+4.2.1. Analyzing design hierarchy..
+Top module:  \tlb_tb
+
+4.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\cva6_tlb_model'.
+Generating RTLIL representation for module `\cva6_tlb_model'.
+
+4.2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\cva6_tlb_sv32'.
+Generating RTLIL representation for module `\cva6_tlb_sv32'.
+
+4.2.4. Analyzing design hierarchy..
+Top module:  \tlb_tb
+Used module:     \cva6_tlb_model
+Used module:     \cva6_tlb_sv32
+
+4.2.5. Analyzing design hierarchy..
+Top module:  \tlb_tb
+Used module:     \cva6_tlb_model
+Used module:     \cva6_tlb_sv32
+Removing unused module `$abstract\cva6_tlb_model'.
+Removing unused module `$abstract\cva6_tlb_sv32'.
+Removing unused module `$abstract\tlb_tb'.
+Removed 3 unused modules.
+Module tlb_tb directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4.3. Executing PROC pass (convert processes to netlists).
+
+4.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:0$518'.
+Cleaned up 0 empty switches.
+
+4.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$cva6_tlb_sv32.v:173$516 in module cva6_tlb_sv32.
+Marked 12 switch rules as full_case in process $proc$cva6_tlb_sv32.v:126$211 in module cva6_tlb_sv32.
+Marked 24 switch rules as full_case in process $proc$cva6_tlb_sv32.v:98$102 in module cva6_tlb_sv32.
+Marked 8 switch rules as full_case in process $proc$cva6_tlb_sv32.v:73$69 in module cva6_tlb_sv32.
+Marked 6 switch rules as full_case in process $proc$cva6_tlb_model.v:72$43 in module cva6_tlb_model.
+Removed a total of 0 dead cases.
+
+4.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 3 redundant assignments.
+Promoted 105 assignments to connections.
+
+4.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\tlb_tb.$proc$cva6_tlb_equiv.v:0$41'.
+  Set init value: $formal$cva6_tlb_equiv.v:158$10_EN = 1'0
+Found init rule in `\tlb_tb.$proc$cva6_tlb_equiv.v:0$39'.
+  Set init value: $formal$cva6_tlb_equiv.v:157$9_EN = 1'0
+Found init rule in `\tlb_tb.$proc$cva6_tlb_equiv.v:0$37'.
+  Set init value: $formal$cva6_tlb_equiv.v:153$8_EN = 1'0
+Found init rule in `\tlb_tb.$proc$cva6_tlb_equiv.v:0$34'.
+  Set init value: \init = 1'1
+  Set init value: \counter = 8'00000000
+  Set init value: \reset = 1'0
+
+4.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:173$516'.
+Found async reset \rst_ni in `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+
+4.3.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:173$516'.
+     1/3: $0\plru_tree_q[5:0]
+     2/3: $0\content_q[127:0]
+     3/3: $0\tags_q[123:0]
+Creating decoders for process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+     1/44: $2\plru_replacement.sv2v_autoblock_6.$for_loop$5[3].sv2v_autoblock_7.en[0:0]$506
+     2/44: $1\plru_replacement.sv2v_autoblock_6.$for_loop$5[3].sv2v_autoblock_7.en[0:0]$493
+     3/44: $2\plru_replacement.sv2v_autoblock_6.$for_loop$5[2].sv2v_autoblock_7.en[0:0]$480
+     4/44: $1\plru_replacement.sv2v_autoblock_6.$for_loop$5[2].sv2v_autoblock_7.en[0:0]$467
+     5/44: $2\plru_replacement.sv2v_autoblock_6.$for_loop$5[1].sv2v_autoblock_7.en[0:0]$454
+     6/44: $1\plru_replacement.sv2v_autoblock_6.$for_loop$5[1].sv2v_autoblock_7.en[0:0]$441
+     7/44: $2\plru_replacement.sv2v_autoblock_6.$for_loop$5[0].sv2v_autoblock_7.en[0:0]$428
+     8/44: $1\plru_replacement.sv2v_autoblock_6.$for_loop$5[0].sv2v_autoblock_7.en[0:0]$415
+     9/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[3].sv2v_autoblock_4.sv2v_autoblock_5.lvl[31:0]$379
+    10/44: $4\plru_tree_n[5:0]
+    11/44: $1$bitselwrite$data$cva6_tlb_sv32.v:142$68[5:0]$383
+    12/44: $1$bitselwrite$mask$cva6_tlb_sv32.v:142$67[5:0]$382
+    13/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[3].sv2v_autoblock_4.new_index[31:0]$378
+    14/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[3].sv2v_autoblock_4.shift[31:0]$377
+    15/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[3].sv2v_autoblock_4.idx_base[31:0]$376
+    16/44: $1$bitselwrite$data$cva6_tlb_sv32.v:142$66[5:0]$381
+    17/44: $1$bitselwrite$mask$cva6_tlb_sv32.v:142$65[5:0]$380
+    18/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[2].sv2v_autoblock_4.sv2v_autoblock_5.lvl[31:0]$342
+    19/44: $3\plru_tree_n[5:0]
+    20/44: $1$bitselwrite$data$cva6_tlb_sv32.v:142$64[5:0]$346
+    21/44: $1$bitselwrite$mask$cva6_tlb_sv32.v:142$63[5:0]$345
+    22/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[2].sv2v_autoblock_4.new_index[31:0]$341
+    23/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[2].sv2v_autoblock_4.shift[31:0]$340
+    24/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[2].sv2v_autoblock_4.idx_base[31:0]$339
+    25/44: $1$bitselwrite$data$cva6_tlb_sv32.v:142$62[5:0]$344
+    26/44: $1$bitselwrite$mask$cva6_tlb_sv32.v:142$61[5:0]$343
+    27/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[1].sv2v_autoblock_4.sv2v_autoblock_5.lvl[31:0]$305
+    28/44: $2\plru_tree_n[5:0]
+    29/44: $1$bitselwrite$data$cva6_tlb_sv32.v:142$60[5:0]$309
+    30/44: $1$bitselwrite$mask$cva6_tlb_sv32.v:142$59[5:0]$308
+    31/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[1].sv2v_autoblock_4.new_index[31:0]$304
+    32/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[1].sv2v_autoblock_4.shift[31:0]$303
+    33/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[1].sv2v_autoblock_4.idx_base[31:0]$302
+    34/44: $1$bitselwrite$data$cva6_tlb_sv32.v:142$58[5:0]$307
+    35/44: $1$bitselwrite$mask$cva6_tlb_sv32.v:142$57[5:0]$306
+    36/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[0].sv2v_autoblock_4.sv2v_autoblock_5.lvl[31:0]$268
+    37/44: $1\plru_tree_n[5:0]
+    38/44: $1$bitselwrite$data$cva6_tlb_sv32.v:142$56[5:0]$272
+    39/44: $1$bitselwrite$mask$cva6_tlb_sv32.v:142$55[5:0]$271
+    40/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[0].sv2v_autoblock_4.new_index[31:0]$267
+    41/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[0].sv2v_autoblock_4.shift[31:0]$266
+    42/44: $1\plru_replacement.sv2v_autoblock_3.$for_loop$3[0].sv2v_autoblock_4.idx_base[31:0]$265
+    43/44: $1$bitselwrite$data$cva6_tlb_sv32.v:142$54[5:0]$270
+    44/44: $1$bitselwrite$mask$cva6_tlb_sv32.v:142$53[5:0]$269
+Creating decoders for process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:98$102'.
+     1/36: $8\content_n[127:96]
+     2/36: $24\tags_n[123:93]
+     3/36: $19\tags_n[123:93] [30:1]
+     4/36: $22\tags_n[93:93]
+     5/36: $21\tags_n[93:93]
+     6/36: $20\tags_n[93:93]
+     7/36: $23\tags_n[93:93]
+     8/36: $7\content_n[127:96]
+     9/36: $19\tags_n[123:93] [0]
+    10/36: $6\content_n[95:64]
+    11/36: $18\tags_n[92:62]
+    12/36: $13\tags_n[92:62] [30:1]
+    13/36: $16\tags_n[62:62]
+    14/36: $15\tags_n[62:62]
+    15/36: $14\tags_n[62:62]
+    16/36: $17\tags_n[62:62]
+    17/36: $5\content_n[95:64]
+    18/36: $13\tags_n[92:62] [0]
+    19/36: $4\content_n[63:32]
+    20/36: $12\tags_n[61:31]
+    21/36: $7\tags_n[61:31] [30:1]
+    22/36: $10\tags_n[31:31]
+    23/36: $9\tags_n[31:31]
+    24/36: $8\tags_n[31:31]
+    25/36: $11\tags_n[31:31]
+    26/36: $3\content_n[63:32]
+    27/36: $7\tags_n[61:31] [0]
+    28/36: $2\content_n[31:0]
+    29/36: $6\tags_n[30:0]
+    30/36: $1\tags_n[30:0] [30:1]
+    31/36: $4\tags_n[0:0]
+    32/36: $3\tags_n[0:0]
+    33/36: $2\tags_n[0:0]
+    34/36: $5\tags_n[0:0]
+    35/36: $1\content_n[31:0]
+    36/36: $1\tags_n[30:0] [0]
+Creating decoders for process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+     1/32: $8\lu_hit[3:3]
+     2/32: $8\lu_hit_o[0:0]
+     3/32: $8\lu_content_o[31:0]
+     4/32: $8\lu_is_4M_o[0:0]
+     5/32: $7\lu_hit[3:3]
+     6/32: $7\lu_hit_o[0:0]
+     7/32: $7\lu_is_4M_o[0:0]
+     8/32: $7\lu_content_o[31:0]
+     9/32: $6\lu_hit[2:2]
+    10/32: $6\lu_hit_o[0:0]
+    11/32: $6\lu_content_o[31:0]
+    12/32: $6\lu_is_4M_o[0:0]
+    13/32: $5\lu_hit[2:2]
+    14/32: $5\lu_hit_o[0:0]
+    15/32: $5\lu_is_4M_o[0:0]
+    16/32: $5\lu_content_o[31:0]
+    17/32: $4\lu_hit[1:1]
+    18/32: $4\lu_hit_o[0:0]
+    19/32: $4\lu_content_o[31:0]
+    20/32: $4\lu_is_4M_o[0:0]
+    21/32: $3\lu_hit[1:1]
+    22/32: $3\lu_hit_o[0:0]
+    23/32: $3\lu_is_4M_o[0:0]
+    24/32: $3\lu_content_o[31:0]
+    25/32: $2\lu_hit[0:0]
+    26/32: $2\lu_hit_o[0:0]
+    27/32: $2\lu_content_o[31:0]
+    28/32: $2\lu_is_4M_o[0:0]
+    29/32: $1\lu_hit[0:0]
+    30/32: $1\lu_hit_o[0:0]
+    31/32: $1\lu_is_4M_o[0:0]
+    32/32: $1\lu_content_o[31:0]
+Creating decoders for process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+     1/30: $4\content_q[127:0]
+     2/30: $16\tags_q[123:0]
+     3/30: $11\tags_q[93:93]
+     4/30: $10\tags_q[62:62]
+     5/30: $9\tags_q[31:31]
+     6/30: $8\tags_q[0:0]
+     7/30: $3\content_q[127:0] [127:96]
+     8/30: $3\content_q[127:0] [31:0]
+     9/30: $7\tags_q[123:0] [30:0]
+    10/30: $7\tags_q[123:0] [61:31]
+    11/30: $3\content_q[127:0] [95:64]
+    12/30: $3\content_q[127:0] [63:32]
+    13/30: $7\tags_q[123:0] [92:62]
+    14/30: $7\tags_q[123:0] [123:93]
+    15/30: $2\content_q[127:0]
+    16/30: $6\tags_q[123:0]
+    17/30: $5\tags_q[93:93]
+    18/30: $4\tags_q[62:62]
+    19/30: $3\tags_q[31:31]
+    20/30: $2\tags_q[0:0]
+    21/30: $1\content_q[127:0]
+    22/30: $1\tags_q[123:0]
+    23/30: $1\synth__txn_flush_one[0:0]
+    24/30: $1\synth__txn_none[0:0]
+    25/30: $1\synth__txn_update[0:0]
+    26/30: $1\synth__txn_flush_all[0:0]
+    27/30: $1\update_i_queue[62:0]
+    28/30: $1\vaddr_to_be_flushed_i_queue[31:0]
+    29/30: $1\asid_to_be_flushed_i_queue[0:0]
+    30/30: $1\flush_i_queue[0:0]
+Creating decoders for process `\tlb_tb.$proc$cva6_tlb_equiv.v:0$41'.
+Creating decoders for process `\tlb_tb.$proc$cva6_tlb_equiv.v:0$39'.
+Creating decoders for process `\tlb_tb.$proc$cva6_tlb_equiv.v:0$37'.
+Creating decoders for process `\tlb_tb.$proc$cva6_tlb_equiv.v:94$36'.
+Creating decoders for process `\tlb_tb.$proc$cva6_tlb_equiv.v:89$35'.
+Creating decoders for process `\tlb_tb.$proc$cva6_tlb_equiv.v:0$34'.
+Creating decoders for process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+     1/8: $0$formal$cva6_tlb_equiv.v:153$8_EN[0:0]$18
+     2/8: $0$formal$cva6_tlb_equiv.v:153$8_CHECK[0:0]$17
+     3/8: $0$formal$cva6_tlb_equiv.v:157$9_EN[0:0]$20
+     4/8: $0$formal$cva6_tlb_equiv.v:157$9_CHECK[0:0]$19
+     5/8: $0$formal$cva6_tlb_equiv.v:158$10_EN[0:0]$22
+     6/8: $0$formal$cva6_tlb_equiv.v:158$10_CHECK[0:0]$21
+     7/8: $0\reset[0:0]
+     8/8: $0\init[0:0]
+
+4.3.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\cva6_tlb_sv32.\replace_en' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_tree_n' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.i' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$mask$cva6_tlb_sv32.v:142$53' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$data$cva6_tlb_sv32.v:142$54' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$mask$cva6_tlb_sv32.v:142$55' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$data$cva6_tlb_sv32.v:142$56' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$mask$cva6_tlb_sv32.v:142$57' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$data$cva6_tlb_sv32.v:142$58' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$mask$cva6_tlb_sv32.v:142$59' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$data$cva6_tlb_sv32.v:142$60' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$mask$cva6_tlb_sv32.v:142$61' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$data$cva6_tlb_sv32.v:142$62' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$mask$cva6_tlb_sv32.v:142$63' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$data$cva6_tlb_sv32.v:142$64' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$mask$cva6_tlb_sv32.v:142$65' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$data$cva6_tlb_sv32.v:142$66' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$mask$cva6_tlb_sv32.v:142$67' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.$bitselwrite$data$cva6_tlb_sv32.v:142$68' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.i' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[0].sv2v_autoblock_7.en' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[0].sv2v_autoblock_7.idx_base' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[0].sv2v_autoblock_7.shift' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[0].sv2v_autoblock_7.new_index' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[0].sv2v_autoblock_7.sv2v_autoblock_8.lvl' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[1].sv2v_autoblock_7.en' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[1].sv2v_autoblock_7.idx_base' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[1].sv2v_autoblock_7.shift' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[1].sv2v_autoblock_7.new_index' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[1].sv2v_autoblock_7.sv2v_autoblock_8.lvl' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[2].sv2v_autoblock_7.en' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[2].sv2v_autoblock_7.idx_base' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[2].sv2v_autoblock_7.shift' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[2].sv2v_autoblock_7.new_index' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[2].sv2v_autoblock_7.sv2v_autoblock_8.lvl' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[3].sv2v_autoblock_7.en' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[3].sv2v_autoblock_7.idx_base' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[3].sv2v_autoblock_7.shift' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[3].sv2v_autoblock_7.new_index' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+No latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_6.$for_loop$5[3].sv2v_autoblock_7.sv2v_autoblock_8.lvl' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[0].sv2v_autoblock_4.idx_base' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1149
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[0].sv2v_autoblock_4.shift' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1160
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[0].sv2v_autoblock_4.new_index' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1163
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[0].sv2v_autoblock_4.sv2v_autoblock_5.lvl' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1166
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[1].sv2v_autoblock_4.idx_base' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1169
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[1].sv2v_autoblock_4.shift' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1180
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[1].sv2v_autoblock_4.new_index' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1183
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[1].sv2v_autoblock_4.sv2v_autoblock_5.lvl' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1186
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[2].sv2v_autoblock_4.idx_base' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1189
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[2].sv2v_autoblock_4.shift' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1200
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[2].sv2v_autoblock_4.new_index' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1203
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[2].sv2v_autoblock_4.sv2v_autoblock_5.lvl' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1206
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[3].sv2v_autoblock_4.idx_base' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1209
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[3].sv2v_autoblock_4.shift' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1220
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[3].sv2v_autoblock_4.new_index' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1223
+Latch inferred for signal `\cva6_tlb_sv32.\plru_replacement.sv2v_autoblock_3.$for_loop$3[3].sv2v_autoblock_4.sv2v_autoblock_5.lvl' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211': $auto$proc_dlatch.cc:427:proc_dlatch$1226
+No latch inferred for signal `\cva6_tlb_sv32.\tags_n' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:98$102'.
+No latch inferred for signal `\cva6_tlb_sv32.\content_n' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:98$102'.
+No latch inferred for signal `\cva6_tlb_sv32.\vaddr_vpn0_match' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:98$102'.
+No latch inferred for signal `\cva6_tlb_sv32.\vaddr_vpn1_match' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:98$102'.
+No latch inferred for signal `\cva6_tlb_sv32.\update_flush.sv2v_autoblock_2.i' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:98$102'.
+No latch inferred for signal `\cva6_tlb_sv32.\lu_content_o' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+No latch inferred for signal `\cva6_tlb_sv32.\lu_is_4M_o' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+No latch inferred for signal `\cva6_tlb_sv32.\lu_hit_o' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+No latch inferred for signal `\cva6_tlb_sv32.\vpn0' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+No latch inferred for signal `\cva6_tlb_sv32.\vpn1' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+No latch inferred for signal `\cva6_tlb_sv32.\lu_hit' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+No latch inferred for signal `\cva6_tlb_sv32.\translation.sv2v_autoblock_1.i' from process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+No latch inferred for signal `\tlb_tb.\tb_io_vaddr_to_be_flushed_i' from process `\tlb_tb.$proc$cva6_tlb_equiv.v:94$36'.
+No latch inferred for signal `\tlb_tb.\tb_io_asid_to_be_flushed_i' from process `\tlb_tb.$proc$cva6_tlb_equiv.v:89$35'.
+
+4.3.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\cva6_tlb_sv32.\tags_q' using process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:173$516'.
+  created $adff cell `$procdff$1229' with positive edge clock and negative level reset.
+Creating register for signal `\cva6_tlb_sv32.\content_q' using process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:173$516'.
+  created $adff cell `$procdff$1230' with positive edge clock and negative level reset.
+Creating register for signal `\cva6_tlb_sv32.\plru_tree_q' using process `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:173$516'.
+  created $adff cell `$procdff$1231' with positive edge clock and negative level reset.
+Creating register for signal `\cva6_tlb_model.\tags_q' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $adff cell `$procdff$1232' with positive edge clock and negative level reset.
+Creating register for signal `\cva6_tlb_model.\content_q' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $adff cell `$procdff$1233' with positive edge clock and negative level reset.
+Creating register for signal `\cva6_tlb_model.\flush_i_queue' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $adff cell `$procdff$1234' with positive edge clock and negative level reset.
+Creating register for signal `\cva6_tlb_model.\asid_to_be_flushed_i_queue' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $adff cell `$procdff$1235' with positive edge clock and negative level reset.
+Creating register for signal `\cva6_tlb_model.\vaddr_to_be_flushed_i_queue' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $adff cell `$procdff$1236' with positive edge clock and negative level reset.
+Creating register for signal `\cva6_tlb_model.\update_i_queue' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $adff cell `$procdff$1237' with positive edge clock and negative level reset.
+Creating register for signal `\cva6_tlb_model.\synth__txn_flush_all' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $dff cell `$procdff$1240' with positive edge clock.
+Creating register for signal `\cva6_tlb_model.\synth__txn_update' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $dff cell `$procdff$1243' with positive edge clock.
+Creating register for signal `\cva6_tlb_model.\synth__txn_none' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $dff cell `$procdff$1246' with positive edge clock.
+Creating register for signal `\cva6_tlb_model.\synth__txn_flush_one' using process `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+  created $dff cell `$procdff$1249' with positive edge clock.
+Creating register for signal `\tlb_tb.\init' using process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+  created $dff cell `$procdff$1250' with positive edge clock.
+Creating register for signal `\tlb_tb.\counter' using process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+  created $dff cell `$procdff$1251' with positive edge clock.
+Creating register for signal `\tlb_tb.$formal$cva6_tlb_equiv.v:153$8_CHECK' using process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+  created $dff cell `$procdff$1252' with positive edge clock.
+Creating register for signal `\tlb_tb.$formal$cva6_tlb_equiv.v:153$8_EN' using process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+  created $dff cell `$procdff$1253' with positive edge clock.
+Creating register for signal `\tlb_tb.$formal$cva6_tlb_equiv.v:157$9_CHECK' using process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+  created $dff cell `$procdff$1254' with positive edge clock.
+Creating register for signal `\tlb_tb.$formal$cva6_tlb_equiv.v:157$9_EN' using process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+  created $dff cell `$procdff$1255' with positive edge clock.
+Creating register for signal `\tlb_tb.$formal$cva6_tlb_equiv.v:158$10_CHECK' using process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+  created $dff cell `$procdff$1256' with positive edge clock.
+Creating register for signal `\tlb_tb.$formal$cva6_tlb_equiv.v:158$10_EN' using process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+  created $dff cell `$procdff$1257' with positive edge clock.
+Creating register for signal `\tlb_tb.\reset' using process `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+  created $dff cell `$procdff$1258' with positive edge clock.
+
+4.3.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.3.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:173$516'.
+Found and cleaned up 12 empty switches in `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+Removing empty process `cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:126$211'.
+Found and cleaned up 24 empty switches in `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:98$102'.
+Removing empty process `cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:98$102'.
+Found and cleaned up 8 empty switches in `\cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+Removing empty process `cva6_tlb_sv32.$proc$cva6_tlb_sv32.v:73$69'.
+Found and cleaned up 5 empty switches in `\cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+Removing empty process `cva6_tlb_model.$proc$cva6_tlb_model.v:72$43'.
+Removing empty process `tlb_tb.$proc$cva6_tlb_equiv.v:0$41'.
+Removing empty process `tlb_tb.$proc$cva6_tlb_equiv.v:0$39'.
+Removing empty process `tlb_tb.$proc$cva6_tlb_equiv.v:0$37'.
+Removing empty process `tlb_tb.$proc$cva6_tlb_equiv.v:94$36'.
+Removing empty process `tlb_tb.$proc$cva6_tlb_equiv.v:89$35'.
+Removing empty process `tlb_tb.$proc$cva6_tlb_equiv.v:0$34'.
+Found and cleaned up 3 empty switches in `\tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+Removing empty process `tlb_tb.$proc$cva6_tlb_equiv.v:148$16'.
+Cleaned up 52 empty switches.
+
+4.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cva6_tlb_sv32.
+<suppressed ~277 debug messages>
+Optimizing module cva6_tlb_model.
+<suppressed ~2 debug messages>
+Optimizing module tlb_tb.
+<suppressed ~1 debug messages>
+
+4.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cva6_tlb_sv32..
+Finding unused cells or wires in module \cva6_tlb_model..
+Finding unused cells or wires in module \tlb_tb..
+Removed 60 unused cells and 814 unused wires.
+<suppressed ~72 debug messages>
+
+4.6. Executing CHECK pass (checking for obvious problems).
+Checking module cva6_tlb_model...
+Warning: Wire cva6_tlb_model.\lu_is_4M_o is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_hit_o is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [31] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [30] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [29] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [28] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [27] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [26] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [25] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [24] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [23] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [22] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [21] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [20] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [19] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [18] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [17] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [16] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [15] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [14] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [13] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [12] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [11] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [10] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [9] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [8] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [7] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [6] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [5] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [4] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [3] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [2] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [1] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [0] is used but has no driver.
+Checking module cva6_tlb_sv32...
+Checking module tlb_tb...
+Found and reported 34 problems.
+
+4.7. Executing OPT pass (performing simple optimizations).
+
+4.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cva6_tlb_model.
+Optimizing module cva6_tlb_sv32.
+Optimizing module tlb_tb.
+
+4.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cva6_tlb_model'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `\cva6_tlb_sv32'.
+<suppressed ~72 debug messages>
+Finding identical cells in module `\tlb_tb'.
+Removed a total of 28 cells.
+
+4.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cva6_tlb_model..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$1059.
+    dead port 2/2 on $mux $procmux$1068.
+    dead port 2/2 on $mux $procmux$1077.
+    dead port 2/2 on $mux $procmux$1085.
+    dead port 2/2 on $mux $procmux$1092.
+    dead port 2/2 on $mux $procmux$1100.
+    dead port 2/2 on $mux $procmux$1107.
+    dead port 2/2 on $mux $procmux$1113.
+Running muxtree optimizer on module \cva6_tlb_sv32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$1015.
+    dead port 2/2 on $mux $procmux$1021.
+    dead port 2/2 on $mux $procmux$1027.
+    dead port 2/2 on $mux $procmux$1033.
+    dead port 1/2 on $mux $procmux$655.
+    dead port 1/2 on $mux $procmux$661.
+    dead port 1/2 on $mux $procmux$671.
+    dead port 1/2 on $mux $procmux$674.
+    dead port 2/2 on $mux $procmux$676.
+    dead port 1/2 on $mux $procmux$683.
+    dead port 2/2 on $mux $procmux$685.
+    dead port 2/2 on $mux $procmux$691.
+    dead port 1/2 on $mux $procmux$698.
+    dead port 1/2 on $mux $procmux$701.
+    dead port 1/2 on $mux $procmux$704.
+    dead port 2/2 on $mux $procmux$706.
+    dead port 1/2 on $mux $procmux$718.
+    dead port 1/2 on $mux $procmux$724.
+    dead port 1/2 on $mux $procmux$734.
+    dead port 1/2 on $mux $procmux$737.
+    dead port 2/2 on $mux $procmux$739.
+    dead port 1/2 on $mux $procmux$746.
+    dead port 2/2 on $mux $procmux$748.
+    dead port 2/2 on $mux $procmux$754.
+    dead port 1/2 on $mux $procmux$761.
+    dead port 1/2 on $mux $procmux$764.
+    dead port 1/2 on $mux $procmux$767.
+    dead port 2/2 on $mux $procmux$769.
+    dead port 1/2 on $mux $procmux$781.
+    dead port 1/2 on $mux $procmux$787.
+    dead port 1/2 on $mux $procmux$797.
+    dead port 1/2 on $mux $procmux$800.
+    dead port 2/2 on $mux $procmux$802.
+    dead port 1/2 on $mux $procmux$809.
+    dead port 2/2 on $mux $procmux$811.
+    dead port 2/2 on $mux $procmux$817.
+    dead port 1/2 on $mux $procmux$824.
+    dead port 1/2 on $mux $procmux$827.
+    dead port 1/2 on $mux $procmux$830.
+    dead port 2/2 on $mux $procmux$832.
+    dead port 1/2 on $mux $procmux$844.
+    dead port 1/2 on $mux $procmux$850.
+    dead port 1/2 on $mux $procmux$860.
+    dead port 1/2 on $mux $procmux$863.
+    dead port 2/2 on $mux $procmux$865.
+    dead port 1/2 on $mux $procmux$872.
+    dead port 2/2 on $mux $procmux$874.
+    dead port 2/2 on $mux $procmux$880.
+    dead port 1/2 on $mux $procmux$887.
+    dead port 1/2 on $mux $procmux$890.
+    dead port 1/2 on $mux $procmux$893.
+    dead port 2/2 on $mux $procmux$895.
+    dead port 2/2 on $mux $procmux$907.
+    dead port 2/2 on $mux $procmux$913.
+    dead port 2/2 on $mux $procmux$919.
+    dead port 2/2 on $mux $procmux$925.
+    dead port 2/2 on $mux $procmux$943.
+    dead port 2/2 on $mux $procmux$949.
+    dead port 2/2 on $mux $procmux$955.
+    dead port 2/2 on $mux $procmux$961.
+    dead port 2/2 on $mux $procmux$979.
+    dead port 2/2 on $mux $procmux$985.
+    dead port 2/2 on $mux $procmux$991.
+    dead port 2/2 on $mux $procmux$997.
+Running muxtree optimizer on module \tlb_tb..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 72 multiplexer ports.
+<suppressed ~50 debug messages>
+
+4.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cva6_tlb_model.
+  Optimizing cells in module \cva6_tlb_sv32.
+  Optimizing cells in module \tlb_tb.
+Performed a total of 0 changes.
+
+4.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cva6_tlb_model'.
+Finding identical cells in module `\cva6_tlb_sv32'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\tlb_tb'.
+<suppressed ~6 debug messages>
+Removed a total of 4 cells.
+
+4.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cva6_tlb_model..
+Finding unused cells or wires in module \cva6_tlb_sv32..
+Finding unused cells or wires in module \tlb_tb..
+Removed 0 unused cells and 104 unused wires.
+<suppressed ~3 debug messages>
+
+4.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cva6_tlb_model.
+Optimizing module cva6_tlb_sv32.
+Optimizing module tlb_tb.
+
+4.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cva6_tlb_model..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \cva6_tlb_sv32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \tlb_tb..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~48 debug messages>
+
+4.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cva6_tlb_model.
+  Optimizing cells in module \cva6_tlb_sv32.
+  Optimizing cells in module \tlb_tb.
+Performed a total of 0 changes.
+
+4.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cva6_tlb_model'.
+Finding identical cells in module `\cva6_tlb_sv32'.
+Finding identical cells in module `\tlb_tb'.
+Removed a total of 0 cells.
+
+4.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cva6_tlb_model..
+Finding unused cells or wires in module \cva6_tlb_sv32..
+Finding unused cells or wires in module \tlb_tb..
+
+4.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cva6_tlb_model.
+Optimizing module cva6_tlb_sv32.
+Optimizing module tlb_tb.
+
+4.7.14. Finished OPT passes. (There is nothing left to do.)
+
+4.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 3 bits (of 4) from port B of cell cva6_tlb_model.$procmux$1067_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell cva6_tlb_model.$procmux$1084_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell cva6_tlb_model.$procmux$1091_CMP0 ($eq).
+Removed top 1 bits (of 33) from wire cva6_tlb_model.content_q_0.
+Removed top 1 bits (of 33) from wire cva6_tlb_model.content_q_1.
+Removed top 1 bits (of 33) from wire cva6_tlb_model.content_q_2.
+Removed top 1 bits (of 33) from wire cva6_tlb_model.content_q_3.
+Removed top 1 bits (of 32) from wire cva6_tlb_model.tags_q_0.
+Removed top 1 bits (of 32) from wire cva6_tlb_model.tags_q_1.
+Removed top 1 bits (of 32) from wire cva6_tlb_model.tags_q_2.
+Removed top 1 bits (of 32) from wire cva6_tlb_model.tags_q_3.
+Removed top 5 bits (of 6) from port B of cell cva6_tlb_sv32.$or$cva6_tlb_sv32.v:0$286 ($or).
+Removed top 4 bits (of 6) from port B of cell cva6_tlb_sv32.$or$cva6_tlb_sv32.v:0$300 ($or).
+Removed top 5 bits (of 6) from port B of cell cva6_tlb_sv32.$or$cva6_tlb_sv32.v:0$323 ($or).
+Removed top 5 bits (of 6) from port B of cell cva6_tlb_sv32.$or$cva6_tlb_sv32.v:0$337 ($or).
+Removed top 5 bits (of 6) from port B of cell cva6_tlb_sv32.$or$cva6_tlb_sv32.v:0$360 ($or).
+Removed top 3 bits (of 6) from port B of cell cva6_tlb_sv32.$or$cva6_tlb_sv32.v:0$374 ($or).
+Removed top 5 bits (of 6) from port B of cell cva6_tlb_sv32.$or$cva6_tlb_sv32.v:0$397 ($or).
+Removed top 5 bits (of 6) from port B of cell cva6_tlb_sv32.$or$cva6_tlb_sv32.v:0$411 ($or).
+Removed top 1 bits (of 32) from wire cva6_tlb_sv32.cdata.
+Removed top 31 bits (of 32) from port B of cell tlb_tb.$add$cva6_tlb_equiv.v:149$23 ($add).
+Removed top 24 bits (of 32) from port Y of cell tlb_tb.$add$cva6_tlb_equiv.v:149$23 ($add).
+Removed top 31 bits (of 32) from port B of cell tlb_tb.$gt$cva6_tlb_equiv.v:150$24 ($gt).
+Removed top 6 bits (of 8) from port B of cell tlb_tb.$eq$cva6_tlb_equiv.v:153$26 ($eq).
+
+4.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cva6_tlb_model..
+Finding unused cells or wires in module \cva6_tlb_sv32..
+Finding unused cells or wires in module \tlb_tb..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~3 debug messages>
+
+4.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.11. Executing OPT pass (performing simple optimizations).
+
+4.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cva6_tlb_model.
+Optimizing module cva6_tlb_sv32.
+Optimizing module tlb_tb.
+
+4.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cva6_tlb_model'.
+Finding identical cells in module `\cva6_tlb_sv32'.
+Finding identical cells in module `\tlb_tb'.
+Removed a total of 0 cells.
+
+4.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cva6_tlb_model..
+Finding unused cells or wires in module \cva6_tlb_sv32..
+Finding unused cells or wires in module \tlb_tb..
+
+4.11.4. Finished fast OPT passes.
+
+4.12. Printing statistics.
+
+=== cva6_tlb_model ===
+
+   Number of wires:                 44
+   Number of wire bits:           1449
+   Number of public wires:          26
+   Number of public wire bits:     931
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 26
+     $adff                           2
+     $eq                             4
+     $logic_and                      3
+     $logic_not                      2
+     $mux                           14
+     $not                            1
+
+=== cva6_tlb_sv32 ===
+
+   Number of wires:                210
+   Number of wire bits:           2142
+   Number of public wires:          47
+   Number of public wire bits:    1423
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                200
+     $adff                           3
+     $and                           20
+     $eq                            24
+     $logic_and                     53
+     $logic_not                      4
+     $logic_or                      12
+     $mux                           70
+     $not                            5
+     $or                             8
+     $reduce_or                      1
+
+=== tlb_tb ===
+
+   Number of wires:                 56
+   Number of wire bits:           1007
+   Number of public wires:          36
+   Number of public wire bits:     980
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 33
+     $add                            1
+     $anyseq                         5
+     $assert                         2
+     $assume                         1
+     $dff                            8
+     $eq                             3
+     $gt                             1
+     $logic_and                      2
+     $logic_not                      1
+     $mux                            7
+     cva6_tlb_model                  1
+     cva6_tlb_sv32                   1
+
+=== design hierarchy ===
+
+   tlb_tb                            1
+     cva6_tlb_model                  1
+     cva6_tlb_sv32                   1
+
+   Number of wires:                310
+   Number of wire bits:           4598
+   Number of public wires:         109
+   Number of public wire bits:    3334
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                257
+     $add                            1
+     $adff                           5
+     $and                           20
+     $anyseq                         5
+     $assert                         2
+     $assume                         1
+     $dff                            8
+     $eq                            31
+     $gt                             1
+     $logic_and                     58
+     $logic_not                      7
+     $logic_or                      12
+     $mux                           91
+     $not                            6
+     $or                             8
+     $reduce_or                      1
+
+4.13. Executing CHECK pass (checking for obvious problems).
+Checking module cva6_tlb_model...
+Warning: Wire cva6_tlb_model.\lu_is_4M_o is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_hit_o is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [31] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [30] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [29] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [28] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [27] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [26] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [25] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [24] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [23] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [22] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [21] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [20] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [19] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [18] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [17] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [16] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [15] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [14] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [13] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [12] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [11] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [10] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [9] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [8] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [7] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [6] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [5] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [4] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [3] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [2] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [1] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [0] is used but has no driver.
+Checking module cva6_tlb_sv32...
+Checking module tlb_tb...
+Found and reported 34 problems.
+
+5. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+6. Executing ASYNC2SYNC pass.
+Replacing cva6_tlb_model.$procdff$1232 ($adff): ARST=\rst_ni, D=$0\tags_q[123:0], Q=\tags_q
+Replacing cva6_tlb_model.$procdff$1233 ($adff): ARST=\rst_ni, D=$0\content_q[127:0], Q=\content_q
+Replacing cva6_tlb_sv32.$procdff$1229 ($adff): ARST=\rst_ni, D=\tags_n, Q=\tags_q
+Replacing cva6_tlb_sv32.$procdff$1230 ($adff): ARST=\rst_ni, D=\content_n, Q=\content_q
+Replacing cva6_tlb_sv32.$procdff$1231 ($adff): ARST=\rst_ni, D=\plru_tree_n, Q=\plru_tree_q
+
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cva6_tlb_model..
+Finding unused cells or wires in module \cva6_tlb_sv32..
+Finding unused cells or wires in module \tlb_tb..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+8. Executing SETUNDEF pass (replace undef values with defined constants).
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cva6_tlb_model.
+Optimizing module cva6_tlb_sv32.
+Optimizing module tlb_tb.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cva6_tlb_model'.
+Finding identical cells in module `\cva6_tlb_sv32'.
+Finding identical cells in module `\tlb_tb'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$1258 ($dff) from module tlb_tb (D = 1'1, Q = \reset).
+Adding EN signal on $procdff$1250 ($dff) from module tlb_tb (D = 1'0, Q = \init).
+
+9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cva6_tlb_model..
+Finding unused cells or wires in module \cva6_tlb_sv32..
+Finding unused cells or wires in module \tlb_tb..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+9.5. Rerunning OPT passes. (Removed registers in this run.)
+
+9.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cva6_tlb_model.
+Optimizing module cva6_tlb_sv32.
+Optimizing module tlb_tb.
+
+9.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cva6_tlb_model'.
+Finding identical cells in module `\cva6_tlb_sv32'.
+Finding identical cells in module `\tlb_tb'.
+Removed a total of 0 cells.
+
+9.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cva6_tlb_model..
+Finding unused cells or wires in module \cva6_tlb_sv32..
+Finding unused cells or wires in module \tlb_tb..
+
+9.10. Finished fast OPT passes.
+
+10. Executing CHECK pass (checking for obvious problems).
+Checking module cva6_tlb_model...
+Warning: Wire cva6_tlb_model.\lu_is_4M_o is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_hit_o is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [31] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [30] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [29] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [28] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [27] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [26] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [25] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [24] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [23] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [22] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [21] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [20] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [19] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [18] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [17] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [16] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [15] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [14] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [13] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [12] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [11] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [10] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [9] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [8] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [7] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [6] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [5] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [4] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [3] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [2] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [1] is used but has no driver.
+Warning: Wire cva6_tlb_model.\lu_content_o [0] is used but has no driver.
+Checking module cva6_tlb_sv32...
+Checking module tlb_tb...
+Found and reported 34 problems.
+
+11. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1. Analyzing design hierarchy..
+Top module:  \tlb_tb
+Used module:     \cva6_tlb_model
+Used module:     \cva6_tlb_sv32
+
+11.2. Analyzing design hierarchy..
+Top module:  \tlb_tb
+Used module:     \cva6_tlb_model
+Used module:     \cva6_tlb_sv32
+Removed 0 unused modules.
+Module tlb_tb directly or indirectly contains formal properties -> setting "keep" attribute.
+
+12. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+Warnings: 37 unique messages, 105 total
+End of script. Logfile hash: 2cbeb16d48, CPU: user 0.48s system 0.02s, MEM: 17.41 MB peak
+Yosys 0.9+4052 (git sha1 a58571d0, clang 6.0.0-1ubuntu2 -fPIC -Os)
+Time spent: 26% 8x opt_clean (0 sec), 21% 3x check (0 sec), ...

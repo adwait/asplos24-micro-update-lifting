@@ -1,0 +1,82 @@
+[tasks]
+taskBMC12_equiv_tlb task_bmc12 files_equiv_tlb
+taskBMC15_equiv_tlb task_bmc15 files_equiv_tlb
+taskProve_equiv_tlb task_prove files_equiv_tlb
+taskBMC20_ni_tlb task_bmc20 files_ni_tlb
+taskBMC20_ni_model_tlb task_bmc20 files_ni_model_tlb
+taskProve_ni_model_tlb task_prove files_ni_model_tlb
+
+[options]
+task_bmc12:
+mode bmc
+depth 12
+--
+
+task_bmc15:
+mode bmc
+depth 15
+--
+
+task_bmc20:
+mode bmc
+depth 20
+--
+
+task_prove:
+mode prove
+--
+
+[engines]
+task_bmc12:
+smtbmc boolector
+--
+
+task_bmc15:
+smtbmc boolector
+--
+
+task_bmc20:
+smtbmc boolector
+--
+
+task_prove:
+abc pdr
+--
+
+
+[script]
+files_equiv_tlb:
+read -formal cva6_tlb_equiv.v
+read -formal cva6_tlb_sv32.v
+read -formal cva6_tlb_model.v
+prep -top tlb_tb
+--
+
+files_ni_tlb:
+read -formal cva6_tlb_ni.v
+read -formal cva6_tlb_sv32.v
+prep -top tlb_tb
+--
+
+files_ni_model_tlb:
+read -formal cva6_tlb_ni_model.v
+read -formal cva6_tlb_model.v
+prep -top tlb_tb
+--
+
+[files]
+files_equiv_tlb:
+cva6_tlb_equiv.v
+cva6_tlb_model.v
+cva6_tlb_sv32.v
+--
+
+files_ni_tlb:
+cva6_tlb_ni.v
+cva6_tlb_sv32.v
+--
+
+files_ni_model_tlb:
+cva6_tlb_ni_model.v
+cva6_tlb_model.v
+--

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites disabled="0" errors="0" failures="0" tests="1" time="43">
+<testsuite disabled="0" errors="0" failures="0" name="equiv" skipped="0" tests="1" time="43">
+<properties>
+<property name="os" value="posix"/>
+</properties>
+<testcase classname="equiv" name="taskBMC30_equiv_tlb" status="PASS" time="43">
+<system-out>SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] Removing directory 'equiv_taskBMC30_equiv_tlb'.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] Copy 'cva6_tlb_equiv.v' to 'equiv_taskBMC30_equiv_tlb/src/cva6_tlb_equiv.v'.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] Copy 'cva6_tlb_model.v' to 'equiv_taskBMC30_equiv_tlb/src/cva6_tlb_model.v'.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] Copy 'cva6_tlb_sv32.v' to 'equiv_taskBMC30_equiv_tlb/src/cva6_tlb_sv32.v'.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] engine_0: smtbmc boolector
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: starting process &quot;cd equiv_taskBMC30_equiv_tlb/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: wire '\reset' is assigned in a block at cva6_tlb_equiv.v:12.13-12.22.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: wire '\reset' is assigned in a block at cva6_tlb_equiv.v:151.13-151.23.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: cva6_tlb_equiv.v:111: Warning: Identifier `\reset' is implicitly declared.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_is_4M_o is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_hit_o is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [31] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [30] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [29] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [28] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [27] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [26] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [25] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [24] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [23] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [22] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [21] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [20] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [19] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [18] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [17] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [16] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [15] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [14] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [13] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [12] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [11] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [10] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [9] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [8] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [7] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [6] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [5] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [4] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [3] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [2] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [1] is used but has no driver.
+SBY 15:56:57 [equiv_taskBMC30_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [0] is used but has no driver.
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] base: finished (returncode=0)
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] smt2: starting process &quot;cd equiv_taskBMC30_equiv_tlb/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] smt2: finished (returncode=0)
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] engine_0: starting process &quot;cd equiv_taskBMC30_equiv_tlb; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 30  --append 0 --dump-vcd engine_0/trace.vcd --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Solver: boolector
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 15:56:58 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:01  Checking assumptions in step 9..
+SBY 15:56:59 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:01  Checking assertions in step 9..
+SBY 15:57:00 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:01  Checking assumptions in step 10..
+SBY 15:57:00 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:01  Checking assertions in step 10..
+SBY 15:57:00 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:02  Checking assumptions in step 11..
+SBY 15:57:00 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:02  Checking assertions in step 11..
+SBY 15:57:01 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:02  Checking assumptions in step 12..
+SBY 15:57:01 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:02  Checking assertions in step 12..
+SBY 15:57:02 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:03  Checking assumptions in step 13..
+SBY 15:57:02 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:03  Checking assertions in step 13..
+SBY 15:57:03 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:04  Checking assumptions in step 14..
+SBY 15:57:03 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:04  Checking assertions in step 14..
+SBY 15:57:04 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:05  Checking assumptions in step 15..
+SBY 15:57:04 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:05  Checking assertions in step 15..
+SBY 15:57:05 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:06  Checking assumptions in step 16..
+SBY 15:57:05 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:06  Checking assertions in step 16..
+SBY 15:57:06 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:08  Checking assumptions in step 17..
+SBY 15:57:06 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:08  Checking assertions in step 17..
+SBY 15:57:08 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:09  Checking assumptions in step 18..
+SBY 15:57:08 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:09  Checking assertions in step 18..
+SBY 15:57:10 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:11  Checking assumptions in step 19..
+SBY 15:57:10 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:11  Checking assertions in step 19..
+SBY 15:57:11 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:13  Checking assumptions in step 20..
+SBY 15:57:11 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:13  Checking assertions in step 20..
+SBY 15:57:13 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:14  Checking assumptions in step 21..
+SBY 15:57:13 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:14  Checking assertions in step 21..
+SBY 15:57:15 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:16  Checking assumptions in step 22..
+SBY 15:57:15 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:16  Checking assertions in step 22..
+SBY 15:57:17 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:18  Checking assumptions in step 23..
+SBY 15:57:17 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:19  Checking assertions in step 23..
+SBY 15:57:19 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:20  Checking assumptions in step 24..
+SBY 15:57:19 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:20  Checking assertions in step 24..
+SBY 15:57:21 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:23  Checking assumptions in step 25..
+SBY 15:57:22 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:24  Checking assertions in step 25..
+SBY 15:57:24 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:25  Checking assumptions in step 26..
+SBY 15:57:24 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:25  Checking assertions in step 26..
+SBY 15:57:26 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:27  Checking assumptions in step 27..
+SBY 15:57:27 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:28  Checking assertions in step 27..
+SBY 15:57:29 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:30  Checking assumptions in step 28..
+SBY 15:57:29 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:30  Checking assertions in step 28..
+SBY 15:57:34 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:35  Checking assumptions in step 29..
+SBY 15:57:34 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:35  Checking assertions in step 29..
+SBY 15:57:40 [equiv_taskBMC30_equiv_tlb] engine_0: ##   0:00:41  Status: passed
+SBY 15:57:40 [equiv_taskBMC30_equiv_tlb] engine_0: finished (returncode=0)
+SBY 15:57:40 [equiv_taskBMC30_equiv_tlb] engine_0: Status returned by engine: pass
+SBY 15:57:40 [equiv_taskBMC30_equiv_tlb] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:43 (43)
+SBY 15:57:40 [equiv_taskBMC30_equiv_tlb] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:43 (43)
+SBY 15:57:40 [equiv_taskBMC30_equiv_tlb] summary: engine_0 (smtbmc boolector) returned pass
+SBY 15:57:40 [equiv_taskBMC30_equiv_tlb] DONE (PASS, rc=0)
+</system-out></testcase></testsuite></testsuites>

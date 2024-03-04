@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites disabled="0" errors="0" failures="0" tests="1" time="4">
+<testsuite disabled="0" errors="0" failures="0" name="proofs_tlb" skipped="0" tests="1" time="4">
+<properties>
+<property name="os" value="posix"/>
+</properties>
+<testcase classname="proofs_tlb" name="taskBMC15_equiv_tlb" status="PASS" time="4">
+<system-out>SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] Removing directory 'proofs_tlb_taskBMC15_equiv_tlb'.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] Copy 'cva6_tlb_equiv.v' to 'proofs_tlb_taskBMC15_equiv_tlb/src/cva6_tlb_equiv.v'.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] Copy 'cva6_tlb_model.v' to 'proofs_tlb_taskBMC15_equiv_tlb/src/cva6_tlb_model.v'.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] Copy 'cva6_tlb_sv32.v' to 'proofs_tlb_taskBMC15_equiv_tlb/src/cva6_tlb_sv32.v'.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: smtbmc boolector
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: starting process &quot;cd proofs_tlb_taskBMC15_equiv_tlb/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: wire '\reset' is assigned in a block at cva6_tlb_equiv.v:12.13-12.22.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: wire '\reset' is assigned in a block at cva6_tlb_equiv.v:151.13-151.23.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: cva6_tlb_equiv.v:111: Warning: Identifier `\reset' is implicitly declared.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_is_4M_o is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_hit_o is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [31] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [30] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [29] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [28] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [27] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [26] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [25] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [24] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [23] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [22] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [21] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [20] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [19] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [18] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [17] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [16] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [15] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [14] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [13] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [12] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [11] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [10] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [9] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [8] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [7] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [6] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [5] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [4] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [3] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [2] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [1] is used but has no driver.
+SBY 15:27:19 [proofs_tlb_taskBMC15_equiv_tlb] base: Warning: Wire cva6_tlb_model.\lu_content_o [0] is used but has no driver.
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] base: finished (returncode=0)
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] smt2: starting process &quot;cd proofs_tlb_taskBMC15_equiv_tlb/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] smt2: finished (returncode=0)
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: starting process &quot;cd proofs_tlb_taskBMC15_equiv_tlb; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 15  --append 0 --dump-vcd engine_0/trace.vcd --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Solver: boolector
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 15:27:20 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:01  Checking assumptions in step 11..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:01  Checking assertions in step 11..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:01  Checking assumptions in step 12..
+SBY 15:27:21 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:01  Checking assertions in step 12..
+SBY 15:27:22 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:01  Checking assumptions in step 13..
+SBY 15:27:22 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:01  Checking assertions in step 13..
+SBY 15:27:22 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:02  Checking assumptions in step 14..
+SBY 15:27:22 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:02  Checking assertions in step 14..
+SBY 15:27:23 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: ##   0:00:03  Status: passed
+SBY 15:27:23 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: finished (returncode=0)
+SBY 15:27:23 [proofs_tlb_taskBMC15_equiv_tlb] engine_0: Status returned by engine: pass
+SBY 15:27:23 [proofs_tlb_taskBMC15_equiv_tlb] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:03 (3)
+SBY 15:27:23 [proofs_tlb_taskBMC15_equiv_tlb] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:04 (4)
+SBY 15:27:23 [proofs_tlb_taskBMC15_equiv_tlb] summary: engine_0 (smtbmc boolector) returned pass
+SBY 15:27:23 [proofs_tlb_taskBMC15_equiv_tlb] DONE (PASS, rc=0)
+</system-out></testcase></testsuite></testsuites>

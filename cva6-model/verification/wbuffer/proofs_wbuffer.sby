@@ -1,0 +1,53 @@
+[tasks]
+taskBMC12_equiv_wbuffer task_bmc12 files_equiv_wbuffer
+taskBMC15_equiv_wbuffer task_bmc15 files_equiv_wbuffer
+taskProve_equiv_wbuffer task_prove files_equiv_wbuffer
+
+[options]
+task_bmc12:
+mode bmc
+depth 12
+--
+
+task_bmc15:
+mode bmc
+depth 15
+--
+
+task_prove:
+mode prove
+--
+
+[engines]
+task_bmc12:
+smtbmc boolector
+--
+
+task_bmc15:
+smtbmc boolector
+--
+
+task_prove:
+abc pdr
+--
+
+[script]
+files_equiv_wbuffer:
+read -formal -DEXPOSE_STATE cva6_wbuffer_equiv.v
+read -formal -DEXPOSE_STATE rr_arb_tree.v 
+read -formal -DEXPOSE_STATE lzc.v 
+read -formal -DEXPOSE_STATE fifo_v3.v
+read -formal -DEXPOSE_STATE wt_dcache_wbuffer.v
+read -formal -DEXPOSE_STATE cva6_wbuffer_model.v
+prep -top wbuffer_tb
+--
+
+[files]
+files_equiv_wbuffer:
+cva6_wbuffer_equiv.v
+wt_dcache_wbuffer.v
+rr_arb_tree.v 
+lzc.v 
+fifo_v3.v
+cva6_wbuffer_model.v
+--

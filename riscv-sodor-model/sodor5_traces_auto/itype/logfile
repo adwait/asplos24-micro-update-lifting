@@ -1,0 +1,285 @@
+collapsed40.smt2
+(
+(define-fun feed__alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and x3 x0))
+(define-fun feed__mem_reg_alu_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and (and (not x0) x1) x3) false))
+(define-fun feed__reg_rd_data_in__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (and (and (and (not x1) (or x3 x0)) x2) (not x0)))
+(define-fun feed__reg_rs1_data_out__alu_op1 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool (or (and (and (not x0) (not x2)) (not x1)) (not x3)))
+)
+
+real	1m0.703s
+user	1m0.696s
+sys	0m0.008s
+
+collapsed41.smt2
+(
+(define-fun feed__imm_i__alu_op2 ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.007s
+user	0m0.004s
+sys	0m0.003s
+
+collapsed42.smt2
+(
+(define-fun alu_compute_comb ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.011s
+sys	0m0.005s
+
+collapsed43.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.027s
+user	0m0.027s
+sys	0m0.000s
+
+collapsed44.smt2
+(
+(define-fun feed__dec_wbaddr__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+(define-fun zero__exe_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+)
+
+real	0m0.035s
+user	0m0.030s
+sys	0m0.004s
+
+collapsed45.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.035s
+user	0m0.034s
+sys	0m0.000s
+
+collapsed46.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.035s
+user	0m0.034s
+sys	0m0.002s
+
+collapsed47.smt2
+(
+(define-fun feed__alu_out__mem_reg_alu_out ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.015s
+sys	0m0.000s
+
+collapsed48.smt2
+(
+(define-fun feed__exe_reg_wbaddr__mem_reg_wbaddr ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.013s
+sys	0m0.004s
+
+collapsed49.smt2
+(
+(define-fun feed__mem_reg_wbaddr__reg_rd_addr_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.009s
+sys	0m0.007s
+
+collapsed50.smt2
+(
+(define-fun feed__alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun feed__imm__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun feed__mem_reg_alu_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+(define-fun feed__reg_rs1_data_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun feed__reg_rs2_data_out__reg_rd_data_in ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+)
+
+real	0m0.066s
+user	0m0.065s
+sys	0m0.002s
+
+collapsed51.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.036s
+user	0m0.032s
+sys	0m0.004s
+
+collapsed52.smt2
+(
+(define-fun regs1_read ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.015s
+user	0m0.015s
+sys	0m0.000s
+
+collapsed53.smt2
+(
+(define-fun flush_decode ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool false)
+(define-fun gen_decode_all ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.035s
+user	0m0.035s
+sys	0m0.000s
+
+collapsed54.smt2
+(
+(define-fun regs2_read ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.015s
+sys	0m0.002s
+
+collapsed55.smt2
+(
+(define-fun regs_write ((x0 Bool) (x1 Bool) (x2 Bool) (x3 Bool)) Bool true)
+)
+
+real	0m0.016s
+user	0m0.006s
+sys	0m0.010s
+
+regfile
+(error "Couldn't open file: regfile")
+
+real	0m0.007s
+user	0m0.007s
+sys	0m0.000s
+
+regfile.smt2
+(
+(define-fun regs_write ((x0 Bool) (x1 Bool) (x2 Bool)) Bool true)
+)
+
+real	0m0.076s
+user	0m0.002s
+sys	0m0.022s
+
+regfile
+(error "Couldn't open file: regfile")
+
+real	0m0.040s
+user	0m0.022s
+sys	0m0.018s
+
+imm_i
+(error "Couldn't open file: imm_i")
+
+real	0m0.011s
+user	0m0.002s
+sys	0m0.009s
+
+imm_b
+(error "Couldn't open file: imm_b")
+
+real	0m0.015s
+user	0m0.003s
+sys	0m0.013s
+
+alu_op1
+(error "Couldn't open file: alu_op1")
+
+real	0m0.012s
+user	0m0.012s
+sys	0m0.000s
+
+alu_op2
+(error "Couldn't open file: alu_op2")
+
+real	0m0.017s
+user	0m0.010s
+sys	0m0.008s
+
+reg_rs1_addr_in
+(error "Couldn't open file: reg_rs1_addr_in")
+
+real	0m0.011s
+user	0m0.011s
+sys	0m0.000s
+
+reg_rs2_addr_in
+(error "Couldn't open file: reg_rs2_addr_in")
+
+real	0m0.016s
+user	0m0.016s
+sys	0m0.001s
+
+reg_rs1_data_out
+(error "Couldn't open file: reg_rs1_data_out")
+
+real	0m0.011s
+user	0m0.003s
+sys	0m0.009s
+
+reg_rs2_data_out
+(error "Couldn't open file: reg_rs2_data_out")
+
+real	0m0.010s
+user	0m0.010s
+sys	0m0.000s
+
+alu_out
+(error "Couldn't open file: alu_out")
+
+real	0m0.023s
+user	0m0.023s
+sys	0m0.000s
+
+mem_reg_alu_out
+(error "Couldn't open file: mem_reg_alu_out")
+
+real	0m0.020s
+user	0m0.013s
+sys	0m0.008s
+
+reg_rd_data_in
+(error "Couldn't open file: reg_rd_data_in")
+
+real	0m0.020s
+user	0m0.012s
+sys	0m0.008s
+
+dec_wbaddr
+(error "Couldn't open file: dec_wbaddr")
+
+real	0m0.036s
+user	0m0.002s
+sys	0m0.034s
+
+exe_reg_wbaddr
+(error "Couldn't open file: exe_reg_wbaddr")
+
+real	0m0.013s
+user	0m0.014s
+sys	0m0.000s
+
+mem_reg_wbaddr
+(error "Couldn't open file: mem_reg_wbaddr")
+
+real	0m0.020s
+user	0m0.011s
+sys	0m0.009s
+
+reg_rd_addr_in
+(error "Couldn't open file: reg_rd_addr_in")
+
+real	0m0.013s
+user	0m0.013s
+sys	0m0.000s
+

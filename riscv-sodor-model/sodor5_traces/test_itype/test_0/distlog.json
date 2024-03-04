@@ -1,0 +1,38 @@
+[
+    {
+        "uid": 1666830813,
+        "timestamp": 17,
+        "mseq0": [
+            "gen_decode_i_imm",
+            "gen_decode_b_imm",
+            "gen_decode_rs1_addr",
+            "gen_decode_rs2_addr",
+            "gen_decode_rd_addr",
+            "feed__dec_wbaddr__exe_reg_wbaddr",
+            "feed__exe_reg_wbaddr__mem_reg_wbaddr",
+            "feed__mem_reg_wbaddr__reg_rd_addr_in",
+            "feed__alu_out__mem_reg_alu_out",
+            "feed__mem_reg_alu_out__reg_rd_data_in",
+            "regs_write",
+            "alu_compute_rs_imm",
+            "regs1_read",
+            "regs2_read"
+        ],
+        "mseq1": [
+            "gen_decode_i_imm",
+            "gen_decode_b_imm",
+            "gen_decode_rs1_addr",
+            "gen_decode_rs2_addr",
+            "gen_decode_rd_addr",
+            "feed__dec_wbaddr__exe_reg_wbaddr",
+            "feed__exe_reg_wbaddr__mem_reg_wbaddr",
+            "feed__mem_reg_wbaddr__reg_rd_addr_in",
+            "feed__alu_out__mem_reg_alu_out",
+            "feed__mem_reg_alu_out__reg_rd_data_in",
+            "regs_write",
+            "alu_compute_alu_out_imm",
+            "regs1_read",
+            "regs2_read"
+        ]
+    }
+]

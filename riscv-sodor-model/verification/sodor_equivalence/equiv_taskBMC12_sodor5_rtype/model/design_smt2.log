@@ -1,0 +1,301 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+4052 (git sha1 a58571d0, clang 6.0.0-1ubuntu2 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+3. Printing statistics.
+
+=== sodor5_verif ===
+
+   Number of wires:                130
+   Number of wire bits:           3544
+   Number of public wires:          88
+   Number of public wire bits:    3500
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 75
+     $add                            1
+     $anyseq                         8
+     $assert                         1
+     $assume                         3
+     $dff                            6
+     $eq                            20
+     $logic_and                     24
+     $mux                           10
+     CoreTop                         1
+     sodor5_model                    1
+
+=== sodor5_model ===
+
+   Number of wires:                446
+   Number of wire bits:           8382
+   Number of public wires:         143
+   Number of public wire bits:    3894
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                375
+     $add                            2
+     $and                            1
+     $anyseq                        34
+     $dff                           62
+     $eq                           107
+     $logic_and                     15
+     $logic_not                      6
+     $logic_or                       2
+     $lt                             2
+     $mux                           60
+     $ne                             6
+     $not                            1
+     $or                             1
+     $pmux                          34
+     $reduce_and                     1
+     $reduce_bool                    5
+     $reduce_or                     32
+     $shl                            1
+     $shr                            2
+     $xor                            1
+
+=== SimpleDMEM ===
+
+   Number of wires:               2512
+   Number of wire bits:           8944
+   Number of public wires:         299
+   Number of public wire bits:    6731
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               7257
+     $and                         1197
+     $anyseq                      1632
+     $dff                          549
+     $mux                         2872
+     $not                          787
+     $or                           216
+     $xor                            4
+
+=== RegisterFile ===
+
+   Number of wires:               1375
+   Number of wire bits:           8220
+   Number of public wires:         314
+   Number of public wire bits:    7159
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               4268
+     $and                           81
+     $anyseq                        37
+     $dff                         1024
+     $mux                         3109
+     $not                            5
+     $or                            12
+
+=== Queue_22 ===
+
+   Number of wires:                 95
+   Number of wire bits:            281
+   Number of public wires:          28
+   Number of public wire bits:     214
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                175
+     $and                            3
+     $anyseq                        33
+     $dff                           33
+     $mux                          102
+     $not                            2
+     $or                             1
+     $xor                            1
+
+=== Queue_21 ===
+
+   Number of wires:                 95
+   Number of wire bits:            281
+   Number of public wires:          28
+   Number of public wire bits:     214
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                175
+     $and                            3
+     $anyseq                        33
+     $dff                           33
+     $mux                          102
+     $not                            2
+     $or                             1
+     $xor                            1
+
+=== DatPath ===
+
+   Number of wires:               1953
+   Number of wire bits:           9539
+   Number of public wires:        1006
+   Number of public wire bits:    8497
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5009
+     $and                          568
+     $anyseq                        68
+     $dff                          592
+     $mux                         2851
+     $not                          115
+     $or                           432
+     $xor                          379
+     CSRFile                         1
+     Queue_21                        1
+     Queue_22                        1
+     RegisterFile                    1
+
+=== CtlPath ===
+
+   Number of wires:                830
+   Number of wire bits:           1894
+   Number of public wires:         818
+   Number of public wire bits:    1882
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1216
+     $and                           15
+     $anyseq                         1
+     $dff                           12
+     $mux                          740
+     $not                           95
+     $or                           343
+     $xor                           10
+
+=== CoreTop ===
+
+   Number of wires:                 50
+   Number of wire bits:           1848
+   Number of public wires:          50
+   Number of public wire bits:    1848
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     Core                            1
+     SimpleDMEM                      1
+
+=== Core ===
+
+   Number of wires:                162
+   Number of wire bits:           3920
+   Number of public wires:         162
+   Number of public wire bits:    3920
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     CtlPath                         1
+     DatPath                         1
+
+=== CSRFile ===
+
+   Number of wires:               1233
+   Number of wire bits:           6772
+   Number of public wires:         668
+   Number of public wire bits:    6207
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               3560
+     $and                          294
+     $anyseq                       128
+     $dff                          363
+     $mux                         2090
+     $not                           85
+     $or                           474
+     $xor                          126
+
+=== design hierarchy ===
+
+   sodor5_verif                      1
+     CoreTop                         1
+       Core                          1
+         CtlPath                     1
+         DatPath                     1
+           CSRFile                   1
+           Queue_21                  1
+           Queue_22                  1
+           RegisterFile              1
+       SimpleDMEM                    1
+     sodor5_model                    1
+
+   Number of wires:               8881
+   Number of wire bits:          53625
+   Number of public wires:        3604
+   Number of public wire bits:   44066
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              22104
+     $add                            3
+     $and                         2162
+     $anyseq                      1974
+     $assert                         1
+     $assume                         3
+     $dff                         2674
+     $eq                           127
+     $logic_and                     39
+     $logic_not                      6
+     $logic_or                       2
+     $lt                             2
+     $mux                        11936
+     $ne                             6
+     $not                         1092
+     $or                          1480
+     $pmux                          34
+     $reduce_and                     1
+     $reduce_bool                    5
+     $reduce_or                     32
+     $shl                            1
+     $shr                            2
+     $xor                          522
+
+4. Executing SMT2 backend.
+Creating SMT-LIBv2 representation of module CSRFile.
+Creating SMT-LIBv2 representation of module CtlPath.
+Creating SMT-LIBv2 representation of module Queue_21.
+Creating SMT-LIBv2 representation of module Queue_22.
+Creating SMT-LIBv2 representation of module RegisterFile.
+Creating SMT-LIBv2 representation of module SimpleDMEM.
+Creating SMT-LIBv2 representation of module sodor5_model.
+Creating SMT-LIBv2 representation of module DatPath.
+Creating SMT-LIBv2 representation of module Core.
+Creating SMT-LIBv2 representation of module CoreTop.
+Creating SMT-LIBv2 representation of module sodor5_verif.
+
+End of script. Logfile hash: 0348be4e6c, CPU: user 1.04s system 0.09s, MEM: 58.02 MB peak
+Yosys 0.9+4052 (git sha1 a58571d0, clang 6.0.0-1ubuntu2 -fPIC -Os)
+Time spent: 62% 2x write_smt2 (0 sec), 32% 2x read_ilang (0 sec), ...

@@ -1,0 +1,18 @@
+# running in proofs_tlb_taskBMC15_equiv_tlb/src/
+read -formal cva6_tlb_equiv.v
+read -formal cva6_tlb_sv32.v
+read -formal cva6_tlb_model.v
+prep -top tlb_tb
+
+
+
+memory_nordff
+async2sync
+chformal -assume -early
+chformal -live -fair -cover -remove
+opt_clean
+setundef -anyseq
+opt -keepdc -fast
+check
+hierarchy -simcheck
+write_ilang ../model/design.il

@@ -1,0 +1,19 @@
+# running in proofs_wbuffer_taskBMC15_equiv_wbuffer/src/
+read -formal -DEXPOSE_STATE cva6_wbuffer_equiv.v
+read -formal -DEXPOSE_STATE rr_arb_tree.v
+read -formal -DEXPOSE_STATE lzc.v
+read -formal -DEXPOSE_STATE fifo_v3.v
+read -formal -DEXPOSE_STATE wt_dcache_wbuffer.v
+read -formal -DEXPOSE_STATE cva6_wbuffer_model.v
+prep -top wbuffer_tb
+
+memory_nordff
+async2sync
+chformal -assume -early
+chformal -live -fair -cover -remove
+opt_clean
+setundef -anyseq
+opt -keepdc -fast
+check
+hierarchy -simcheck
+write_ilang ../model/design.il
